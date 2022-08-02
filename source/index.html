@@ -6,19 +6,16 @@
   </head>
   <body>
     <header class="header">
-      <a class="header__logo logo" href="index.html">
-        <img class="header__logo-image" src="./img/logo/logo.svg" alt="Логотип сайта Седона." width="185" height="96">
+      <a class="logo" href="index.html">
+        <img src="./img/logo/logo.svg" alt="Логотип сайта Седона." width="185" height="96">
       </a>
       <nav class="header__navigation navigation">
         <button class="navigation__toogle navigation__toogle--open">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
-        <button class="navigation__toogle navigation__toogle--close">
-          <span class="visually-hidden">Закрыть меню.</span>
-        </button>
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a class="navigation__link">Главная</a>
+            <a class="navigation__link" href="index.html">Главная</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="catalog.html">Фото и видео</a>
@@ -40,7 +37,7 @@
           <img class="promo__image" src=".img/content/advantages-text.svg" alt="Приветствие в прекрасной Седоне." width="282" height="214">
           <p class="promo__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </header>
-        <ul class="promo__list advantages-list">
+        <ol class="promo__list advantages-list">
           <li class="advantages-list__item">
             <div class="advantages-list__container advantages-list__container--theme-light">
               <h3 class="advantages-list__title advantages-title">Настоящий городок</h3>
@@ -92,7 +89,7 @@
               <p class="advantages-list__description">Большинство едет в гранд каньони толпится там</p>
             </div>
           </li>
-        </ul>
+        </ol>
       </section>
       <section class="search">
         <h2 class="search__title">Заинтересовались?</h2>

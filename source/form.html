@@ -6,15 +6,12 @@
   </head>
   <body>
     <header class="header">
-      <a class="header__logo logo" href="index.html">
-        <img class="header__logo-image" src="./img/logo/logo.svg" alt="Логотип сайта Седона." width="185" height="96">
+      <a class="logo" href="index.html">
+        <img src="./img/logo/logo.svg" alt="Логотип сайта Седона." width="185" height="96">
       </a>
       <nav class="header__navigation navigation">
         <button class="navigation__toogle navigation__toogle--open">
           <span class="visually-hidden">Открыть меню.</span>
-        </button>
-        <button class="navigation__toogle navigation__toogle--close">
-          <span class="visually-hidden">Закрыть меню.</span>
         </button>
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -24,7 +21,7 @@
             <a class="navigation__link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link">Форма Отзыва</a>
+            <a class="navigation__link" href="form.html">Форма Отзыва</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="#">HTML ACADEMY</a>
@@ -33,35 +30,34 @@
       </nav>
     </header>
     <main class="main-container">
-      <h1 class="visually-hidden">Отзыв о Седоне.</h1>
       <section class="feedback">
         <header class="feedback__header">
           <img src="./img/content/sedona-form.svg" alt="Седона." width="229" height="39">
         </header>
-        <h2 class="feedback__title title">Оставьте свой отзыв</h2>
+        <h1 class="feedback__title title">Оставьте свой отзыв</h1>
         <p class="feedback__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="feedback__container feedback-about">
-            <legend class="feedback__title feedback-title">Представьтесь:</legend>
-              <label class="feedback-about__label label" for="name">Имя*:</label>
-              <input class="feedback-about__input input" type="text" name="name" id="name" placeholder="Пётр" required>
-              <label class="feedback-about__label label" for="surname">Фамилия*:</label>
-              <input class="feedback-about__input input" type="text" name="surname" id="surname" placeholder="Пустота" required>
-              <label class="feedback-about__label label" for="patronymic">Отчество:</label>
-              <input class="feedback-about__input input" type="text" name="patronymic" id="patronymic" placeholder="Викторович">
+          <fieldset class="form__container">
+            <legend class="form__title form-title">Представьтесь:</legend>
+            <label class="form__label label" for="name">Имя*:</label>
+            <input class="form__input input-text" type="text" name="name" id="name" placeholder="Пётр" required>
+            <label class="form__label label" for="surname">Фамилия*:</label>
+            <input class="form__input input-text" type="text" name="surname" id="surname" placeholder="Пустота" required>
+            <label class="form__label label" for="patronymic">Отчество:</label>
+            <input class="form__input input-text" type="text" name="patronymic" id="patronymic" placeholder="Викторович">
           </fieldset>
-          <fieldset class="feedback__container feedback-contact">
-            <legend class="feedback__title feedback-title">Контактная информация:</legend>
-              <label class="feedback-contact__label label" for="phone">Контактный телефон*:</label>
-              <input class="feedback-contact__input input" type="phone" name="phone" id="phone" placeholder="Введите телефон" required>
+          <fieldset class="form__container">
+            <legend class="form__title form-title">Контактная информация:</legend>
+              <label class="form__label label" for="phone">Контактный телефон*:</label>
+              <input class="form__input input-contact" type="phone" name="phone" id="phone" placeholder="Введите телефон" required>
               <button class="feedback__button button button--secondary" type="button">
                 <span class="visually-hidden">Введите номер телефона.</span>
                 <svg class="feedback__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3.6 7.8C5 10.6 7.4 12.9 10.2 14.4L12.4 12.2C12.7 11.9 13.1 11.8 13.4 12C14.5 12.4 15.7 12.6 17 12.6C17.6 12.6 18 13 18 13.6V17C18 17.6 17.6 18 17 18C7.6 18 0 10.4 0 1C0 0.4 0.4 0 1 0H4.5C5.1 0 5.5 0.4 5.5 1C5.5 2.2 5.7 3.4 6.1 4.6C6.2 4.9 6.1 5.3 5.9 5.6L3.6 7.8Z" fill="#010101"/>
                 </svg>
               </button>
-              <label class="feedback-contact__label label" for="email">Электронная почта*:</label>
-              <input class="feedback-contact__input input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+              <label class="form__label label" for="email">Электронная почта*:</label>
+              <input class="form__input input-contact" type="email" name="email" id="email" placeholder="Введите e-mail" required>
               <button class="feedback__button button button--secondary" type="button">
                 <span class="visually-hidden">Введите ваш email.</span>
                 <svg class="feedback__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,32 +65,32 @@
                 </svg>
               </button>
           </fieldset>
-          <fieldset class="feedback__container feedback-emotion">
-            <legend class="feedback__title feedback-title">Ваше общее впечатление:</legend>
-              <input class="feedback-emotion__input control" type="radio" name="emotion" id="positive" checked>
-              <label class="feedback-emotion__label label-control" for="positive">Скорее положительное</label>
-              <input class="feedback-emotion__input control" type="radio" name="emotion" id="negative">
-              <label class="feedback-emotion__label label-control" for="negative">Скорее отрицательное</label>
-              <input class="feedback-emotion__input control" type="radio" name="emotion" id="neutral">
-              <label class="feedback-emotion__label label-control" for="neutral">Затрудняюсь ответить</label>
+          <fieldset class="form__container">
+            <legend class="form__title form-title">Ваше общее впечатление:</legend>
+              <input class="form__input input-radio" type="radio" name="emotion" id="positive" checked>
+              <label class="form__label label-radio" for="positive">Скорее положительное</label>
+              <input class="form__input input-radio" type="radio" name="emotion" id="negative">
+              <label class="form__label label-radio" for="negative">Скорее отрицательное</label>
+              <input class="form__input input-radio" type="radio" name="emotion" id="neutral">
+              <label class="form__label label-radio" for="neutral">Затрудняюсь ответить</label>
           </fieldset>
-          <fieldset class="feedback__container feedback-attraction">
-            <legend class="feedback__title feedback-title">Посещенные достопримечательности:</legend>
-              <input class="feedback-attraction__input control" type="checkbox" name="bridge" id="bridge" checked>
-              <label class="feedback-attraction__label label-control" for="bridge">Мост Дьявола</label>
-              <input class="feedback-attraction__input control" type="checkbox" name="mountain" id="mountain" checked>
-              <label class="feedback-attraction__label label-control" for="mountain">Гора-Колокол</label>
-              <input class="feedback-attraction__input control" type="checkbox" name="park" id="park" checked>
-              <label class="feedback-attraction__label label-control" for="park">Слайд-парк</label>
-              <input class="feedback-attraction__input control" type="checkbox" name="rock" id="rock">
-              <label class="feedback-attraction__label label-control" for="rock">Красные скалы</label>
+          <fieldset class="form__container">
+            <legend class="form__title form-title">Посещенные достопримечательности:</legend>
+              <input class="form__input input-checkbox" type="checkbox" name="bridge" id="bridge" checked>
+              <label class="form__label label-checkbox" for="bridge">Мост Дьявола</label>
+              <input class="form__input input-checkbox" type="checkbox" name="mountain" id="mountain" checked>
+              <label class="form__label label-checkbox" for="mountain">Гора-Колокол</label>
+              <input class="form__input input-checkbox" type="checkbox" name="park" id="park" checked>
+              <label class="form__label label-checkbox" for="park">Слайд-парк</label>
+              <input class="form__input input-checkbox" type="checkbox" name="rock" id="rock">
+              <label class="form__label label-checkbox" for="rock">Красные скалы</label>
           </fieldset>
-          <fieldset class="feedback__container feedback-review">
-            <legend class="feedback__title feedback-title">Опишите свои эмоции:</legend>
-              <textarea class="feedback-review__textarea textarea" name="review" id="review" placeholder="Опишите подробно все свои восторги "></textarea>
+          <fieldset class="form__container">
+            <legend class="form__title form-title">Опишите свои эмоции:</legend>
+              <textarea class="form__textarea textarea" name="review" id="review" placeholder="Опишите подробно все свои восторги "></textarea>
           </fieldset>
-          <button class="button feedback__button button--main" type="submit">Отправить отзыв</button>
-          <p class="feedback__notice">* — обязательные поля</p>
+          <button class="button form__button button--main" type="submit">Отправить отзыв</button>
+          <p class="form__notice">* — обязательные поля</p>
         </form>
       </section>
     </main>
@@ -136,12 +132,12 @@
         </a>
       </div>
     </footer>
-    <div class="modal modal-error">
+    <div class="modal">
       <h2 class="modal__title title">Что-то пошло не так!</h2>
       <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="modal__button button" type="button">ОК</button>
     </div>
-    <div class="modal modal-accept">
+    <div class="modal">
       <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
       <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем его на сайте.</p>
       <button class="modal__button button" type="button">Закрыть окно</button>
