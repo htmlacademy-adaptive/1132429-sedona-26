@@ -1,0 +1,25 @@
+.promo {
+  min-width: 320px;
+}
+
+.promo__header {
+  background: url("../../img/background/bg-mobile.jpg") no-repeat center;
+  text-align: center;
+  padding: 90px 19px 85px;
+  margin-bottom: 32px;
+}
+
+.promo__image {
+  display: block;
+  margin: 0 auto 0;
+}
+
+.promo__title {
+  margin: 0 auto 35px;
+}
+
+.promo__description {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin: 0 auto 16px;
+}
