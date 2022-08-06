@@ -1,5 +1,6 @@
 .promo {
   min-width: 320px;
+  counter-set: advantages;
 }
 
 .promo__header {
@@ -22,4 +23,5 @@
   color: var(--text-secondary);
   text-transform: uppercase;
   margin: 0 auto 16px;
+  text-align: center;
 }

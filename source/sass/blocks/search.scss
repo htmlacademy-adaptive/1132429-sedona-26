@@ -1,0 +1,35 @@
+.search {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search__title {
+  font-size: 21px;
+  line-height: 26px;
+  margin: 0 auto 20px;
+  text-transform: uppercase;
+}
+
+.search__description {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto 32px;
+}
+
+.search__button {
+  min-width: 284px;
+  padding: 16px 49px;
+  margin: 0 auto 49px;
+  text-decoration: none;
+}
+
+.search__map {
+  margin: 0 auto 20px;
+}
+
+.search__map-image {
+  vertical-align: middle;
+}

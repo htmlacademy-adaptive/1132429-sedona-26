@@ -1,0 +1,42 @@
+.advantages-sublist {
+  list-style-type: none;
+}
+
+.advantages-sublist__item {
+  padding: 8px 10px 22px 47px;
+  position: relative;
+}
+
+.advantages-sublist__item--housing::before,
+.advantages-sublist__item--food::before,
+.advantages-sublist__item--souvenir::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+}
+
+.advantages-sublist__item--housing::before {
+  background: url("../../img/icons/icon-house.svg") no-repeat center;
+}
+
+.advantages-sublist__item--food::before {
+  background: url("../../img/icons/icon-burger.svg") no-repeat center;
+}
+
+.advantages-sublist__item--souvenir::before {
+  background: url("../../img/icons/icon-gift.svg") no-repeat center;
+}
+
+.advantages-sublist__title {
+  margin: 0 auto 16px 0;
+}
+
+.advantages-sublist__description {
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--text-secondary);
+}
