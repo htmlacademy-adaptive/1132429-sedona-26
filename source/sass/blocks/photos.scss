@@ -1,0 +1,32 @@
+.photos {
+  min-width: 320px;
+}
+
+.photos__header {
+  display: flex;
+  justify-content: center;
+  background: url("../../img/background/bg-mobile.jpg") no-repeat center;
+  margin-bottom: 33px;
+}
+
+.photos__image {
+  margin: 52px auto 67px;
+}
+
+.photos__title {
+  margin: 0 auto 21px;
+}
+
+.photos__description {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin: 0 auto 20px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.photos__list {
+  padding: 24px 0 25px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}

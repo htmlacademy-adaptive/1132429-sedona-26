@@ -1,0 +1,38 @@
+.video {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.video__title {
+  margin: 0 auto 27px;
+}
+
+.video__description {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto 38px;
+}
+
+.video__container {
+  min-width: 280px;
+  position: relative;
+}
+
+.video__image {
+  vertical-align: middle;
+}
+
+.video__button {
+  position: absolute;
+  display: block;
+  width: 48px;
+  height: 54px;
+  border: none;
+  background: transparent url("../../img/icons/play-icon.svg") no-repeat center;
+  top: calc(50% - 54px / 2);
+  left: calc(50% - 48px / 2);
+}
