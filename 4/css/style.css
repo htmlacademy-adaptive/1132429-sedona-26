@@ -122,7 +122,7 @@ img {
 }
 
 .promo__header {
-  background: url("../../img/background/bg-mobile.jpg") no-repeat center;
+  background: url("../img/background/bg-mobile.jpg") no-repeat center;
   text-align: center;
   padding: 90px 19px 85px;
   margin-bottom: 32px;
@@ -372,7 +372,7 @@ img {
 .photos__header {
   display: flex;
   justify-content: center;
-  background: url("../../img/background/bg-mobile.jpg") no-repeat center;
+  background: url("../img/background/bg-mobile.jpg") no-repeat center;
   margin-bottom: 33px;
 }
 
