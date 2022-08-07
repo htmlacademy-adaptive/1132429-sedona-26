@@ -84,7 +84,7 @@ img {
   width: 40px;
   height: 40px;
   border: none;
-  background: transparent url("../../img/icons/burger.svg") no-repeat center;
+  background: transparent url("../img/icons/burger.svg") no-repeat center;
   margin: 8px 13px 8px auto;
 }
 .navigation__toogle:hover {
