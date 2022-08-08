@@ -1,0 +1,27 @@
+body {
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--text-main);
+  background-color: var(--bg-color);
+
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+* {
+  outline: 1px solid #000000;
+}

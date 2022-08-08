@@ -1,0 +1,17 @@
+.copyright {
+  min-width: 143px;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  color: var(--text-main);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.copyright__icon {
+  fill: var(--main-text);
+}

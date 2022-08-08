@@ -1,0 +1,17 @@
+.button {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  border: none;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button--main {
+  color: var(--text-accent);
+  background-color: var(--brand-color);
+}
