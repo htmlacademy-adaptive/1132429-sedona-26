@@ -4,10 +4,15 @@
 }
 
 .promo__header {
-  background: url("../img/background/bg-mobile.jpg") no-repeat center;
+  min-height: 389px;
+  background: url("../img/background/bg-mobile.jpg") no-repeat center / auto;
   text-align: center;
   padding: 90px 19px 85px;
   margin-bottom: 32px;
+}
+
+.promo__wrapper {
+  min-width: 100%;
 }
 
 .promo__image {
@@ -24,4 +29,42 @@
   text-transform: uppercase;
   margin: 0 auto 16px;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__header {
+    min-height: 518px;
+    padding: 77px 153px 91px;
+    margin-bottom: 47px;
+  }
+
+  .promo__wrapper {
+    min-width: 90%;
+    margin: 0 auto;
+  }
+
+  .promo__title {
+    font-size: 21px;
+    padding: 0 124px;
+  }
+
+  .promo__description {
+    padding: 0 124px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__header {
+    padding: 78px 370px 90px;
+    margin-bottom: 59px;
+  }
+
+  .promo__wrapper {
+    min-width: 75%;
+    margin: 0 auto;
+  }
+
+  .promo__description {
+    padding: 0 358px;
+  }
 }
