@@ -63,7 +63,7 @@
   }
 
   .navigation__wrapper {
-    min-width: 768px;
+    min-width: 90%;
     margin: 0 auto;
   }
 
@@ -75,6 +75,7 @@
   }
 
   .navigation__item {
+    flex-basis: 25%;
     min-height: 56px;
     margin-bottom: 0;
 
@@ -95,11 +96,16 @@
 
 @media (min-width: $desktop-width) {
   .navigation__wrapper {
-    min-width: 1200px;
+    min-width: 75%;
+    margin: 0 auto;
   }
 
-  .navigation__item--catalog {
-    margin-right: 240px;
+  .navigation__item {
+    flex-basis: 25%;
+
+    &--catalog {
+      margin-right: 240px;
+    }
   }
 
   .navigation__link {
