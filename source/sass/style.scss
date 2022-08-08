@@ -1,1 +1,26 @@
-// Начните писать стили здесь
+@import "./global/fonts.scss";
+@import "./global/default-variables.scss";
+@import "./global/global.scss";
+@import "./blocks/header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/title.scss";
+@import "./blocks/advantages-list.scss";
+@import "./blocks/advantages-title.scss";
+@import "./blocks/advantages-sublist.scss";
+@import "./blocks/search.scss";
+@import "./blocks/button.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/social-list.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/photos.scss";
+@import "./blocks/photo-list.scss";
+@import "./blocks/video.scss";
+@import "./blocks/feedback.scss";
+@import "./blocks/form.scss";
+@import "./blocks/form-title.scss";
+@import "./blocks/label.scss";
+@import "./blocks/input.scss";
+@import "./blocks/label-control.scss";
+@import "./blocks/textarea.scss";
