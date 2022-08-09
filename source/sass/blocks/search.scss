@@ -1,8 +1,14 @@
 .search {
   min-width: 320px;
+}
+
+.search__wrapper {
   display: flex;
+  min-width: 100%;
   flex-direction: column;
   align-items: center;
+  padding: 38px 0 10px;
+  margin: 0 auto;
 }
 
 .search__title {
@@ -17,6 +23,7 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto 32px;
+  padding: 0 10px;
 }
 
 .search__button {
@@ -27,9 +34,51 @@
 }
 
 .search__map {
-  margin: 0 auto 20px;
+  width: 100%;
+  margin: 0;
 }
 
 .search__map-image {
+  width: 100%;
   vertical-align: middle;
+}
+
+@media (min-width: $tablet-width) {
+  .search__wrapper {
+    min-width: 90%;
+    padding: 61px 0 0;
+  }
+
+  .search__title {
+    font-size: 30px;
+    margin: 0 auto 25px;
+  }
+
+  .search__description {
+    padding: 0 167px;
+    margin: 0 auto 40px;
+  }
+
+  .search__button {
+    min-width: 458px;
+    font-size: 21px;
+    padding: 15px 10px 17px;
+    margin: 0 auto 58px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .search__wrapper {
+    min-width: 75%;
+    margin: 0 auto;
+  }
+
+  .search__description {
+    margin: 0 auto 45px;
+  }
+
+  .search__button {
+    margin: 0 auto 66px;
+  }
 }
