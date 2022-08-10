@@ -1,3 +1,6 @@
+@use "../global/variables.scss";
+@use "./title.scss";
+
 .feedback {
   min-width: 320px;
   display: flex;

@@ -1,3 +1,5 @@
+@use "../global/variables.scss";
+
 .navigation {
   display: flex;
   flex-direction: column;
@@ -8,6 +10,12 @@
   color: var(--text-accent);
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--text-main);
+  }
 }
 
 .navigation__toogle {
@@ -21,10 +29,24 @@
   &:hover {
     cursor: pointer;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }
 
 .navigation__wrapper {
   min-width: 100%;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 90%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 75%;
+    margin: 0 auto;
+  }
 }
 
 .navigation__list {
@@ -33,6 +55,13 @@
   background-color: var(--brand-color);
   margin: 0;
   padding: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--bg-color);
+  }
 }
 
 .navigation__item {
@@ -41,40 +70,8 @@
   align-items: center;
   min-height: 55px;
   margin-bottom: 1px;
-}
 
-.navigation__link {
-  width: 100%;
-  font-family: inherit;
-  text-decoration: none;
-  color: inherit;
-  padding: 17px 0 12px;
-}
-
-@media (min-width: $tablet-width) {
-  .navigation {
-    font-size: 14px;
-    line-height: 21px;
-    color: var(--text-main);
-  }
-
-  .navigation__toogle {
-    display: none;
-  }
-
-  .navigation__wrapper {
-    min-width: 90%;
-    margin: 0 auto;
-  }
-
-  .navigation__list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: var(--bg-color);
-  }
-
-  .navigation__item {
+  @media (min-width: variables.$tablet-width) {
     flex-basis: 25%;
     min-height: 56px;
     margin-bottom: 0;
@@ -84,7 +81,23 @@
     }
   }
 
-  .navigation__link {
+  @media (min-width: variables.$desktop-width) {
+    flex-basis: 25%;
+
+    &--catalog {
+      margin-right: 240px;
+    }
+  }
+}
+
+.navigation__link {
+  width: 100%;
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+  padding: 17px 0 12px;
+
+  @media (min-width: variables.$tablet-width) {
     min-width: 153px;
     padding: 18px 0 17px;
 
@@ -92,23 +105,8 @@
       color: var(--text-active);
     }
   }
-}
 
-@media (min-width: $desktop-width) {
-  .navigation__wrapper {
-    min-width: 75%;
-    margin: 0 auto;
-  }
-
-  .navigation__item {
-    flex-basis: 25%;
-
-    &--catalog {
-      margin-right: 240px;
-    }
-  }
-
-  .navigation__link {
+  @media (min-width: variables.$desktop-width) {
     min-width: 240px;
   }
 }
