@@ -1,16 +1,27 @@
+@use "../global/variables.scss";
+
 .photo-list {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .photo-list__item {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 0 20px;
+  justify-content: center;
+  align-content: flex-start;
 
   &::after {
     display: block;
@@ -22,26 +33,88 @@
     bottom: -25px;
     left: 0;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &:first-of-type {
+      grid-column: 1 / -1;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &:first-of-type {
+      min-height: 400px;
+    }
+  }
+}
+
+.photo-list__item-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 0 0;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 22px 20px 15px;
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.photo-list__item-description {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 11px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .photo-list__item-image {
-  margin: 0 auto 15px 0;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.photo-list__description {
+.photo-list__title {
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 0 auto 1px 0;
+
+  @media (min-width: variables.$desktop-width) {
+    color: var(--text-accent);
+  }
 }
 
 .photo-list__author {
-  margin: 0 auto 11px 0;
+  margin: 0 auto 0 0;
   color: var(--text-secondary);
+
+  @media (min-width: variables.$desktop-width) {
+    color: var(--text-accent);
+  }
 }
 
 .photo-list__like-container {
+  align-self: flex-start;
   display: grid;
   grid-template-columns: 23px 1fr;
   gap: 14px;
@@ -60,9 +133,18 @@
 .photo-list__counter {
   font-weight: 700;
   margin-top: 5px;
+
+  @media (min-width: variables.$desktop-width) {
+    color: var(--text-accent);
+  }
 }
 
 .photo-list__icon {
   fill: var(--text-main);
   opacity: 0.3;
+
+  @media (min-width: variables.$desktop-width) {
+    fill: var(--text-accent);
+    opacity: 1;
+  }
 }
