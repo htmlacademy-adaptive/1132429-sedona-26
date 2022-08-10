@@ -1,3 +1,5 @@
+@use "../global/variables.scss";
+
 .search {
   min-width: 320px;
 }
@@ -9,6 +11,16 @@
   align-items: center;
   padding: 38px 0 10px;
   margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 90%;
+    padding: 61px 0 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 75%;
+    margin: 0 auto;
+  }
 }
 
 .search__title {
@@ -16,6 +28,11 @@
   line-height: 26px;
   margin: 0 auto 20px;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+    margin: 0 auto 25px;
+  }
 }
 
 .search__description {
@@ -24,6 +41,15 @@
   text-align: center;
   margin: 0 auto 32px;
   padding: 0 10px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 167px;
+    margin: 0 auto 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 auto 45px;
+  }
 }
 
 .search__button {
@@ -31,6 +57,17 @@
   padding: 16px 49px;
   margin: 0 auto 49px;
   text-decoration: none;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 458px;
+    font-size: 21px;
+    padding: 15px 10px 17px;
+    margin: 0 auto 58px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 auto 66px;
+  }
 }
 
 .search__map {
@@ -41,44 +78,4 @@
 .search__map-image {
   width: 100%;
   vertical-align: middle;
-}
-
-@media (min-width: $tablet-width) {
-  .search__wrapper {
-    min-width: 90%;
-    padding: 61px 0 0;
-  }
-
-  .search__title {
-    font-size: 30px;
-    margin: 0 auto 25px;
-  }
-
-  .search__description {
-    padding: 0 167px;
-    margin: 0 auto 40px;
-  }
-
-  .search__button {
-    min-width: 458px;
-    font-size: 21px;
-    padding: 15px 10px 17px;
-    margin: 0 auto 58px;
-  }
-}
-
-
-@media (min-width: $desktop-width) {
-  .search__wrapper {
-    min-width: 75%;
-    margin: 0 auto;
-  }
-
-  .search__description {
-    margin: 0 auto 45px;
-  }
-
-  .search__button {
-    margin: 0 auto 66px;
-  }
 }

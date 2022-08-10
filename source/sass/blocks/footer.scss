@@ -1,3 +1,5 @@
+@use "../global/variables.scss";
+
 .footer {
   min-width: 320px;
 }
@@ -9,6 +11,19 @@
   align-items: center;
   padding: 28px 20px 23px;
   margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    min-width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 75%;
+    padding: 36px 120px;
+  }
 }
 
 .footer__slogan {
@@ -18,33 +33,16 @@
   text-transform: uppercase;
   margin: 0 auto 33px;
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+  }
 }
 
 .footer__social {
   margin: 0 auto 40px;
-}
 
-@media (min-width: $tablet-width) {
-  .footer__wrapper {
-    flex-direction: row;
-    min-width: 90%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 36px 60px;
-  }
-
-  .footer__slogan {
+  @media (min-width: variables.$tablet-width) {
     margin: 0;
-  }
-
-  .footer__social {
-    margin: 0;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .footer__wrapper {
-    min-width: 75%;
-    padding: 36px 120px;
   }
 }
