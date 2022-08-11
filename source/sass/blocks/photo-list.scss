@@ -66,6 +66,10 @@
     justify-content: space-between;
     padding: 22px 20px 15px;
     background-color: #f2f2f2;
+
+    &--theme-dark {
+      background-color: #eaeaea;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
