@@ -12,6 +12,10 @@
 
 .feedback__title {
   margin: 0 auto 24px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .feedback__description {
