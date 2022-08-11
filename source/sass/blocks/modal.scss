@@ -1,0 +1,56 @@
+@use "../global/variables.scss";
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+
+  &--error {
+    padding: 45px 41px 35px;
+  }
+
+  &--accept {
+    padding: 39px 38px 0;
+  }
+}
+
+.modal {
+  display: none;
+  min-width: 320px;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal__title {
+  margin: 0 auto 37px;
+}
+
+.modal__description {
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin: 0 auto 28px;
+}
+
+.modal__button-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.modal__button {
+  padding: 18px 61px 14px;
+
+  &--accept {
+    padding: 18px 61px 14px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

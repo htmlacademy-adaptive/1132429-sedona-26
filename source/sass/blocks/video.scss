@@ -30,6 +30,11 @@
     font-size: 30px;
     margin: 0 auto 34px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    font-size: 30px;
+    margin: 0 auto 35px;
+  }
 }
 
 .video__description {

@@ -2,13 +2,18 @@
   min-width: 280px;
   display: flex;
   flex-direction: column;
+  padding: 0 20px 0;
 }
 
 .form__container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 16px;
   position: relative;
   border: none;
-  padding: 0 20px 0;
-  margin: 0 0 64px;
+  padding: 0;
+  margin: 0 auto 64px;
 }
 
 .form__title {
@@ -35,7 +40,45 @@
 }
 
 .form__label {
-  margin: 0 0 0 16px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 0;
+}
+
+.form__label--phone::after,
+.form__label--email::after {
+  position: absolute;
+  display: flex;
+  content: "";
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  bottom: 0;
+  right: 0;
+}
+
+.form__label--phone::after {
+  background: #e6e6e6 url("../img/icons/phone-icon.svg") no-repeat center;
+}
+
+.form__label--email::after {
+  background: #e6e6e6 url("../img/icons/mail-icon.svg") no-repeat center;
+}
+
+.form__label-control {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-label__text {
+  margin: 0 auto 0 16px;
+}
+
+.form-label__text-control {
+  margin: 0 auto 0 16px;
 }
 
 .form__textarea {
@@ -56,4 +99,5 @@
   color: var(--text-secondary);
   text-transform: uppercase;
   text-align: right;
+  margin: 0 0 0 auto;
 }
