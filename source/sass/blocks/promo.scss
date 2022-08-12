@@ -11,31 +11,29 @@
   background: url("../img/background/bg-mobile.jpg") no-repeat center / cover;
   text-align: center;
   padding: 90px 19px 85px;
-  margin-bottom: 32px;
 
   @media (min-width: variables.$tablet-width) {
     min-height: 518px;
     padding: 77px 153px 91px;
-    margin-bottom: 47px;
   }
 
   @media (min-width: variables.$desktop-width) {
     padding: 78px 370px 90px;
-    margin-bottom: 59px;
   }
 }
 
 .promo__wrapper {
   min-width: 100%;
+  margin-bottom: 32px;
 
   @media (min-width: variables.$tablet-width) {
     min-width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 47px;
   }
 
   @media (min-width: variables.$desktop-width) {
     min-width: 75%;
-    margin: 0 auto;
+    margin: 0 auto 59px;
   }
 }
 

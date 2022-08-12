@@ -19,6 +19,11 @@
     gap: 48px 70px;
     padding: 0 60px;
     margin: 0 auto 64px;
+
+    @media (min-width: variables.$desktop-width) {
+      gap: 73px 128px;
+      padding: 0 40px;
+    }
   }
 }
 
@@ -74,6 +79,27 @@
       display: none;
     }
   }
+
+  @media (min-width: variables.$desktop-width) {
+    &--impressions {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      padding: 0 53px;
+    }
+
+    &--attraction {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px 64px;
+    }
+
+    &--textarea {
+      padding: 0 96px;
+    }
+
+    &:first-of-type::before {
+      right: -66px;
+    }
+  }
 }
 
 .form__title {
@@ -92,6 +118,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
+    font-size: 21px;
     margin: 0 auto 28px;
 
     &::after,
@@ -112,6 +139,21 @@
     &::before {
       left: 0;
     }
+
+    &--contacts {
+      margin: 0 auto 28px 0;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::after,
+    &::before {
+      width: 280px;
+    }
+
+    &--contacts {
+      margin: 0 auto 30px 30px;
+    }
   }
 }
 
@@ -127,6 +169,20 @@
   position: relative;
   flex-direction: column;
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    &--phone,
+    &--email {
+      margin-left: 18px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &--phone,
+    &--email {
+      margin-left: 0;
+    }
+  }
 }
 
 .form__label--phone::after,
@@ -180,6 +236,10 @@
     min-width: 324px;
     padding: 18px 55px 14px 54px;
     margin: 0 auto 0 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 384px;
   }
 }
 
