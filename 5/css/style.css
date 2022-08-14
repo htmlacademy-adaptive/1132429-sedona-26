@@ -1279,7 +1279,7 @@ img {
   align-items: center;
   width: 58px;
   height: 58px;
-  top: 21px;
+  bottom: 0;
   right: 0;
 }
 
