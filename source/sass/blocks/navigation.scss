@@ -2,6 +2,7 @@
 
 .navigation {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: flex-end;
   font-size: 18px;
@@ -20,14 +21,65 @@
 
 .navigation__toogle {
   display: block;
+  position: relative;
   width: 40px;
   height: 40px;
   border: none;
-  background: transparent url("../img/icons/burger.svg") no-repeat center;
+  background-color: transparent;
   margin: 8px 13px 8px auto;
+  z-index: 4;
+  cursor: pointer;
 
-  &:hover {
-    cursor: pointer;
+  &--closed::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 4px;
+    top: 9px;
+    left: 9px;
+    background-color: var(--brand-color);
+    box-shadow: 0 9px 0 0 var(--brand-color), 0 18px 0 0 var(--brand-color);
+  }
+
+  &--closed:hover::before {
+    background-color: rgba(129, 179, 210, 0.6);
+    box-shadow: 0 9px 0 0 rgba(129, 179, 210, 0.6), 0 18px 0 0 rgba(129, 179, 210, 0.6);
+  }
+
+  &--closed:active::before {
+    background-color: rgba(129, 179, 210, 0.3);
+    box-shadow: 0 9px 0 0 rgba(129, 179, 210, 0.3), 0 18px 0 0 rgba(129, 179, 210, 0.3);
+  }
+
+  &--opened::before,
+  &--opened::after {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 4px;
+    top: 17px;
+    left: 7px;
+    background-color: var(--bg-color);
+  }
+
+  &--opened::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &--opened::after {
+    transform: rotate(-45deg);
+    box-shadow: none;
+  }
+
+  &--opened:hover::before,
+  &--opened:hover::after {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  &--opened:active::before,
+  &--opened:active::after {
+    background-color: rgba(255, 255, 255, 0.3);
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -50,10 +102,27 @@
 }
 
 .navigation__list {
-  // display: none;
+  position: absolute;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  &--opened {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  &--nojs {
+    position: static;
+    top: 56px;
+  }
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
