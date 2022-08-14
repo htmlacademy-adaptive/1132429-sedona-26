@@ -1,8 +1,10 @@
 .social-list {
   min-width: 156px;
+  max-width: 272px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .social-list__item {

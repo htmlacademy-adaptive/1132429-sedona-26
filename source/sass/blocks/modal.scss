@@ -1,0 +1,95 @@
+@use "../global/variables.scss";
+
+.modal {
+  width: 320px;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @media (min-width: variables.$tablet-width) {
+    width: 640px;
+  }
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+
+  &--error {
+    padding: 45px 41px 35px;
+  }
+
+  &--accept {
+    padding: 39px 38px 0;
+    margin: 0 auto 5px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &--error {
+      width: 400px;
+      padding: 50px 46px 49px;
+    }
+
+    &--accept {
+      padding: 53px 98px 0;
+    }
+  }
+}
+
+.modal__title {
+  margin: 0 auto 37px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.modal__description {
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin: 0 auto 28px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 auto 25px;
+  }
+}
+
+.modal__button-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.modal__button {
+  min-width: 180px;
+  padding: 18px 61px 14px;
+
+  &--accept {
+    min-width: 280px;
+    padding: 18px 61px 14px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 272px;
+    padding: 18px 108px 14px;
+
+    &--accept {
+      min-width: 458px;
+      padding: 18px 140px 14px;
+    }
+  }
+}
+
+.modal--close {
+  display: none;
+}

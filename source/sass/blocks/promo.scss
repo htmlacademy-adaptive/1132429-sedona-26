@@ -1,13 +1,40 @@
+@use "../global/variables.scss";
+@use "./title.scss";
+
 .promo {
   min-width: 320px;
   counter-set: advantages;
 }
 
 .promo__header {
-  background: url("../img/background/bg-mobile.jpg") no-repeat center;
+  min-height: 389px;
+  background: url("../img/background/bg-mobile.jpg") no-repeat center / cover;
   text-align: center;
   padding: 90px 19px 85px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 518px;
+    padding: 77px 153px 91px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 78px 370px 90px;
+  }
+}
+
+.promo__wrapper {
+  min-width: 100%;
   margin-bottom: 32px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 90%;
+    margin: 0 auto 47px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 75%;
+    margin: 0 auto 59px;
+  }
 }
 
 .promo__image {
@@ -17,6 +44,11 @@
 
 .promo__title {
   margin: 0 auto 35px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 21px;
+    padding: 0 124px;
+  }
 }
 
 .promo__description {
@@ -24,4 +56,12 @@
   text-transform: uppercase;
   margin: 0 auto 16px;
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 124px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 358px;
+  }
 }

@@ -1,3 +1,5 @@
+@use "../global/variables.scss";
+
 .navigation {
   display: flex;
   flex-direction: column;
@@ -8,6 +10,12 @@
   color: var(--text-accent);
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--text-main);
+  }
 }
 
 .navigation__toogle {
@@ -21,15 +29,37 @@
   &:hover {
     cursor: pointer;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}
+
+.navigation__wrapper {
+  min-width: 100%;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 90%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 75%;
+    margin: 0 auto;
+  }
 }
 
 .navigation__list {
   // display: none;
-  min-width: 100%;
   list-style-type: none;
-  background-color: var(--brand-color);
   margin: 0;
   padding: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .navigation__item {
@@ -37,7 +67,44 @@
   justify-content: center;
   align-items: center;
   min-height: 55px;
-  margin-bottom: 1px;
+  background-color: var(--brand-color);
+
+  &:not(:last-of-type) {
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+    margin-bottom: 1px;
+  }
+
+  &:not(:first-of-type) {
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    flex-basis: 25%;
+    min-height: 56px;
+    margin-bottom: 0;
+    background-color: var(--bg-color);
+    box-shadow: none;
+
+    &--catalog {
+      margin-right: 156px;
+    }
+
+    &:not(:last-of-type) {
+      box-shadow: none;
+    }
+
+    &:not(:first-of-type) {
+      box-shadow: none;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    flex-basis: 25%;
+
+    &--catalog {
+      margin-right: 240px;
+    }
+  }
 }
 
 .navigation__link {
@@ -45,6 +112,18 @@
   font-family: inherit;
   text-decoration: none;
   color: inherit;
-  padding-top: 17px;
-  padding-bottom: 12px;
+  padding: 17px 0 12px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 153px;
+    padding: 18px 0 17px;
+
+    &--active {
+      color: var(--text-active);
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 240px;
+  }
 }

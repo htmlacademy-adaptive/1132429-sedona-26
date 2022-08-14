@@ -1,14 +1,104 @@
+@use "../global/variables.scss";
+
 .form {
   min-width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 90%;
+  }
+}
+
+.form__wrapper {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 70px;
+    margin: 0 auto 64px;
+
+    @media (min-width: variables.$desktop-width) {
+      gap: 73px 128px;
+      padding: 0 40px;
+    }
+  }
 }
 
 .form__container {
+  display: grid;
   position: relative;
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 16px;
   border: none;
-  padding: 0 20px 0;
-  margin: 0 0 64px;
+  padding: 0;
+  margin: 0 auto 64px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    &:nth-child(n+3) {
+      grid-column: 1 / -1;
+    }
+
+    &--impressions {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      padding: 0 36px;
+    }
+
+    &--attraction {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 32px;
+      padding: 0 84px;
+    }
+
+    &:first-of-type::before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: #d8d8d8;
+      top: 0;
+      bottom: 0;
+      right: -36px;
+    }
+
+    &:nth-child(1) > .form__title::after,
+    &:nth-child(1) > .form__title::before,
+    &:nth-child(2) > .form__title::after,
+    &:nth-child(2) > .form__title::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &--impressions {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      padding: 0 53px;
+    }
+
+    &--attraction {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px 64px;
+    }
+
+    &--textarea {
+      padding: 0 96px;
+    }
+
+    &:first-of-type::before {
+      right: -66px;
+    }
+  }
 }
 
 .form__title {
@@ -25,6 +115,45 @@
     left: 0;
     right: 0;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 21px;
+    margin: 0 auto 28px;
+
+    &::after,
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: #d8d8d8;
+      top: 13px;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &--contacts {
+      margin: 0 auto 28px 0;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::after,
+    &::before {
+      width: 280px;
+    }
+
+    &--contacts {
+      margin: 0 auto 30px 30px;
+    }
+  }
 }
 
 .form__input {
@@ -35,7 +164,59 @@
 }
 
 .form__label {
-  margin: 0 0 0 16px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    &--phone,
+    &--email {
+      margin-left: 18px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &--phone,
+    &--email {
+      margin-left: 0;
+    }
+  }
+}
+
+.form__label--phone::after,
+.form__label--email::after {
+  position: absolute;
+  display: flex;
+  content: "";
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  bottom: 0;
+  right: 0;
+}
+
+.form__label--phone::after {
+  background: #e6e6e6 url("../img/icons/phone-icon.svg") no-repeat center;
+}
+
+.form__label--email::after {
+  background: #e6e6e6 url("../img/icons/mail-icon.svg") no-repeat center;
+}
+
+.form__label-control {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-label__text {
+  margin: 0 auto 0 16px;
+}
+
+.form-label__text-control {
+  margin: 0 auto 0 16px;
 }
 
 .form__textarea {
@@ -49,6 +230,16 @@
   min-width: 281px;
   margin: 0 auto 3px;
   padding: 18px 33px 14px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 324px;
+    padding: 18px 55px 14px 54px;
+    margin: 0 auto 0 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 384px;
+  }
 }
 
 .form__notice {
@@ -56,4 +247,9 @@
   color: var(--text-secondary);
   text-transform: uppercase;
   text-align: right;
+  margin: 0 0 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 20px 0 0 auto;
+  }
 }

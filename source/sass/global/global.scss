@@ -1,3 +1,6 @@
+@use "../global/variables.scss";
+@use "../global/fonts.scss";
+
 body {
   font-family: var(--main-font);
   font-size: 14px;

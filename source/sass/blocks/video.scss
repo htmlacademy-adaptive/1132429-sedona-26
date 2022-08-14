@@ -1,13 +1,40 @@
+@use "../global/variables.scss";
+
 .video {
   min-width: 320px;
+}
+
+.video__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 17px 20px 0;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 90%;
+    padding: 58px 60px 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 75%;
+    padding: 62px 40px 120px;
+  }
 }
 
 .video__title {
   margin: 0 auto 27px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+    margin: 0 auto 34px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    font-size: 30px;
+    margin: 0 auto 35px;
+  }
 }
 
 .video__description {
@@ -15,24 +42,51 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto 38px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 auto 66px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 auto 64px;
+  }
 }
 
 .video__container {
-  min-width: 280px;
+  min-width: 100%;
   position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 500px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 800px;
+  }
 }
 
 .video__image {
+  width: 100%;
   vertical-align: middle;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 500px;
+  }
 }
 
 .video__button {
   position: absolute;
-  display: block;
-  width: 48px;
-  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
   border: none;
-  background: transparent url("../../img/icons/play-icon.svg") no-repeat center;
-  top: calc(50% - 54px / 2);
-  left: calc(50% - 48px / 2);
+  background: transparent url("../img/icons/play-icon.svg") no-repeat center;
+  top: calc(50% - 60px / 2);
+  left: calc(50% - 60px / 2);
+
+  &:hover {
+    cursor: pointer;
+  }
 }
