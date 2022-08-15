@@ -12,10 +12,85 @@
   text-align: center;
   text-transform: uppercase;
 
+  &--closed .navigation__toogle::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 4px;
+    top: 9px;
+    left: 9px;
+    background-color: var(--brand-color);
+    box-shadow: 0 9px 0 0 var(--brand-color), 0 18px 0 0 var(--brand-color);
+  }
+
+  &--closed .navigation__toogle:hover::before {
+    background-color: rgba(129, 179, 210, 0.6);
+    box-shadow: 0 9px 0 0 rgba(129, 179, 210, 0.6), 0 18px 0 0 rgba(129, 179, 210, 0.6);
+  }
+
+  &--closed .navigation__toogle:active::before {
+    background-color: rgba(129, 179, 210, 0.3);
+    box-shadow: 0 9px 0 0 rgba(129, 179, 210, 0.3), 0 18px 0 0 rgba(129, 179, 210, 0.3);
+  }
+
+  &--closed .navigation__list {
+    display: none;
+  }
+
+  &--opened .navigation__toogle::before,
+  &--opened .navigation__toogle::after {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 4px;
+    top: 17px;
+    left: 7px;
+    background-color: var(--bg-color);
+  }
+
+  &--opened .navigation__toogle::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &--opened .navigation__toogle::after {
+    transform: rotate(-45deg);
+  }
+
+  &--opened .navigation__toogle:hover::before,
+  &--opened .navigation__toogle:hover::after {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  &--opened .navigation__toogle:active::before,
+  &--opened .navigation__toogle:active::after {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--opened .navigation__list {
+    display: block;
+  }
+
+  &--nojs .navigation__toogle {
+    display: none;
+  }
+
+  &--nojs .navigation__list {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
   @media (min-width: variables.$tablet-width) {
     font-size: 14px;
     line-height: 21px;
     color: var(--text-main);
+
+    &--closed .navigation__list,
+    &--opened .navigation__list,
+    &--nojs .navigation__list {
+      display: flex;
+    }
   }
 }
 
@@ -29,58 +104,6 @@
   margin: 8px 13px 8px auto;
   z-index: 4;
   cursor: pointer;
-
-  &--closed::before {
-    position: absolute;
-    content: "";
-    width: 23px;
-    height: 4px;
-    top: 9px;
-    left: 9px;
-    background-color: var(--brand-color);
-    box-shadow: 0 9px 0 0 var(--brand-color), 0 18px 0 0 var(--brand-color);
-  }
-
-  &--closed:hover::before {
-    background-color: rgba(129, 179, 210, 0.6);
-    box-shadow: 0 9px 0 0 rgba(129, 179, 210, 0.6), 0 18px 0 0 rgba(129, 179, 210, 0.6);
-  }
-
-  &--closed:active::before {
-    background-color: rgba(129, 179, 210, 0.3);
-    box-shadow: 0 9px 0 0 rgba(129, 179, 210, 0.3), 0 18px 0 0 rgba(129, 179, 210, 0.3);
-  }
-
-  &--opened::before,
-  &--opened::after {
-    position: absolute;
-    content: "";
-    width: 27px;
-    height: 4px;
-    top: 17px;
-    left: 7px;
-    background-color: var(--bg-color);
-  }
-
-  &--opened::before {
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-
-  &--opened::after {
-    transform: rotate(-45deg);
-    box-shadow: none;
-  }
-
-  &--opened:hover::before,
-  &--opened:hover::after {
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-
-  &--opened:active::before,
-  &--opened:active::after {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
 
   @media (min-width: variables.$tablet-width) {
     display: none;
@@ -110,19 +133,6 @@
   left: 0;
   right: 0;
   z-index: 3;
-
-  &--opened {
-    display: block;
-  }
-
-  &--closed {
-    display: none;
-  }
-
-  &--nojs {
-    position: static;
-    top: 56px;
-  }
 
   @media (min-width: variables.$tablet-width) {
     display: flex;

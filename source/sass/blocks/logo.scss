@@ -1,3 +1,5 @@
+@use "../global/variables.scss";
+
 .logo {
   position: absolute;
   display: block;
@@ -6,4 +8,8 @@
   max-height: 96px;
   order: 2;
   z-index: 2;
+
+  @media (min-width: variables.$tablet-width) {
+    z-index: 10;
+  }
 }
