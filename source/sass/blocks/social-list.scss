@@ -14,12 +14,21 @@
   width: 46px;
   min-height: 46px;
   background-color: var(--brand-color);
+  cursor: pointer;
 
   &:hover {
-    cursor: pointer;
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
   }
 }
 
 .social-list__icon {
   fill: var(--text-accent);
+
+  &:active {
+    opacity: 0.3;
+  }
 }

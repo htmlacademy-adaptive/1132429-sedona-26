@@ -242,7 +242,7 @@
     background-color: #e5e5e5;
   }
 
-  &--disabled::before {
+  &:active::before {
     background-color: #d5d5d5;
   }
 }
@@ -272,8 +272,8 @@
   left: -2px;
 }
 
-.form__radio:checked + .form-label__text-control--disabled::after,
-.form__checkbox:checked + .form-label__text-control--disabled::after {
+.form__radio:checked + .form-label__text-control:active::after,
+.form__checkbox:checked + .form-label__text-control:active::after {
   opacity: 0.3;
 }
 
