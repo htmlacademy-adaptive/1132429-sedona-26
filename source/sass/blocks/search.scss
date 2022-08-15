@@ -75,7 +75,8 @@
   margin: 0;
 }
 
-.search__map-image {
+.search_map-iframe {
+  display: block;
   width: 100%;
-  vertical-align: middle;
+  border: none;
 }
