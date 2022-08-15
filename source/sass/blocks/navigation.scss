@@ -12,7 +12,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  &--closed .navigation__toogle::before {
+  &--closed .navigation__toggle::before {
     position: absolute;
     content: "";
     width: 23px;
@@ -23,12 +23,12 @@
     box-shadow: 0 9px 0 0 var(--brand-color), 0 18px 0 0 var(--brand-color);
   }
 
-  &--closed .navigation__toogle:hover::before {
+  &--closed .navigation__toggle:hover::before {
     background-color: rgba(129, 179, 210, 0.6);
     box-shadow: 0 9px 0 0 rgba(129, 179, 210, 0.6), 0 18px 0 0 rgba(129, 179, 210, 0.6);
   }
 
-  &--closed .navigation__toogle:active::before {
+  &--closed .navigation__toggle:active::before {
     background-color: rgba(129, 179, 210, 0.3);
     box-shadow: 0 9px 0 0 rgba(129, 179, 210, 0.3), 0 18px 0 0 rgba(129, 179, 210, 0.3);
   }
@@ -37,8 +37,8 @@
     display: none;
   }
 
-  &--opened .navigation__toogle::before,
-  &--opened .navigation__toogle::after {
+  &--opened .navigation__toggle::before,
+  &--opened .navigation__toggle::after {
     position: absolute;
     content: "";
     width: 27px;
@@ -48,22 +48,22 @@
     background-color: var(--bg-color);
   }
 
-  &--opened .navigation__toogle::before {
+  &--opened .navigation__toggle::before {
     transform: rotate(45deg);
     box-shadow: none;
   }
 
-  &--opened .navigation__toogle::after {
+  &--opened .navigation__toggle::after {
     transform: rotate(-45deg);
   }
 
-  &--opened .navigation__toogle:hover::before,
-  &--opened .navigation__toogle:hover::after {
+  &--opened .navigation__toggle:hover::before,
+  &--opened .navigation__toggle:hover::after {
     background-color: rgba(255, 255, 255, 0.6);
   }
 
-  &--opened .navigation__toogle:active::before,
-  &--opened .navigation__toogle:active::after {
+  &--opened .navigation__toggle:active::before,
+  &--opened .navigation__toggle:active::after {
     background-color: rgba(255, 255, 255, 0.3);
   }
 
@@ -71,7 +71,7 @@
     display: block;
   }
 
-  &--nojs .navigation__toogle {
+  &--nojs .navigation__toggle {
     display: none;
   }
 
@@ -94,7 +94,7 @@
   }
 }
 
-.navigation__toogle {
+.navigation__toggle {
   display: block;
   position: relative;
   width: 40px;
