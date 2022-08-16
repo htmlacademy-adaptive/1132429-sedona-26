@@ -26,8 +26,10 @@
 .search__title {
   font-size: 21px;
   line-height: 26px;
+  padding: 0 10px;
   margin: 0 auto 20px;
   text-transform: uppercase;
+  text-align: center;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 30px;
