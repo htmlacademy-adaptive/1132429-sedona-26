@@ -1,3 +1,5 @@
+@use "../global/variables.scss";
+
 .copyright {
   min-width: 143px;
 }
@@ -10,6 +12,22 @@
   color: var(--text-main);
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover {
+    color: var(--brand-color);
+  }
+
+  &:active {
+    color: var(--copyright-active);
+  }
+
+  &:hover .copyright__icon {
+    fill: var(--brand-color);
+  }
+
+  &:active .copyright__icon {
+    fill: var(--copyright-active);
+  }
 }
 
 .copyright__icon {

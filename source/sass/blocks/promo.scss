@@ -43,6 +43,7 @@
 }
 
 .promo__title {
+  padding: 0 10px;
   margin: 0 auto 35px;
 
   @media (min-width: variables.$tablet-width) {
@@ -54,6 +55,7 @@
 .promo__description {
   color: var(--text-secondary);
   text-transform: uppercase;
+  padding: 0 10px;
   margin: 0 auto 16px;
   text-align: center;
 

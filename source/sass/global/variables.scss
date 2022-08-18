@@ -1,11 +1,24 @@
 :root {
   --brand-color: #81b3d2;
+  --brand-color-hover: #669ec0;
+  --brand-color-active: #5496bd;
   --text-main: #000000;
   --text-secondary: #333333;
   --text-accent: #ffffff;
   --text-active: #766357;
   --bg-color: #ffffff;
   --bg-color-secondary: #eeeeee;
+  --button-disabled: #e5e5e5;
+  --input: #f2f2f2;
+  --input-main: #e5e5e5;
+  --check-color: #d5d5d5;
+  --input-icon-bg: #e6e6e6;
+  --form-deco: #d8d8d8;
+  --copyright-active: #b3b3b3;
+  --modal-bg: #f2f2f2;
+  --photo-bg: #f2f2f2;
+  --photo-bg-dark: #eaeaea;
+  --photo-deco: #e5e5e5;
 }
 
 $tablet-width: 768px;
