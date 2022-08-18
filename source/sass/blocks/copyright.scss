@@ -1,3 +1,5 @@
+@use "../global/variables.scss";
+
 .copyright {
   min-width: 143px;
 }
@@ -16,7 +18,7 @@
   }
 
   &:active {
-    color: #b3b3b3;
+    color: var(--copyright-active);
   }
 
   &:hover .copyright__icon {
@@ -24,7 +26,7 @@
   }
 
   &:active .copyright__icon {
-    fill: #b3b3b3;
+    fill: var(--copyright-active);
   }
 }
 

@@ -149,11 +149,11 @@
   background-color: var(--brand-color);
 
   &:hover {
-    background-color: #669ec0;
+    background-color: var(--brand-color-hover);
   }
 
   &:active {
-    background-color: #5496bd;
+    background-color: var(--brand-color-active);
     color: rgba(255, 255, 255, 0.3);
   }
 
