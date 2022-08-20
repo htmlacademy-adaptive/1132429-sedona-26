@@ -8,9 +8,21 @@
 
 .promo__header {
   min-height: 389px;
+  position: relative;
   background: url("../img/background/bg-mobile.jpg") no-repeat center / cover;
   text-align: center;
   padding: 90px 19px 85px;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 57px;
+    background: url("../../img/background/intro-triangle.svg") no-repeat center;
+    left: 0;
+    bottom: 0;
+  }
 
   @media (min-width: variables.$tablet-width) {
     min-height: 518px;
@@ -56,7 +68,7 @@
   color: var(--text-secondary);
   text-transform: uppercase;
   padding: 0 10px;
-  margin: 0 auto 16px;
+  margin: 0 auto 55px;
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
