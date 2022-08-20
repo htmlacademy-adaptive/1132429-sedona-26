@@ -21,6 +21,14 @@
     }
   }
 
+  &:focus {
+    color: var(--brand-color);
+
+    .copyright__icon {
+      fill: var(--brand-color);
+    }
+  }
+
   &:active {
     color: var(--copyright-active);
 
