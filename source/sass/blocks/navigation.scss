@@ -62,16 +62,13 @@
       box-shadow: none;
     }
 
-    .navigation__toggle:hover::before,
-    .navigation__toggle:hover::after,
-    .navigation__toggle:focus::before,
-    .navigation__toggle:focus::after {
-      background-color: rgba(255, 255, 255, 0.6);
+    .navigation__toggle:hover,
+    .navigation__toggle:focus {
+      opacity: 0.6;
     }
 
-    .navigation__toggle:active::before,
-    .navigation__toggle:active::after {
-      background-color: rgba(255, 255, 255, 0.3);
+    .navigation__toggle:active {
+      opacity: 0.3;
     }
 
     .navigation__list {
@@ -87,7 +84,8 @@
     .navigation__list {
       display: block;
       position: absolute;
-      top: 0;
+      top: 56px;
+      z-index: 1;
     }
   }
 
