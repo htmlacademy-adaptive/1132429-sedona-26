@@ -123,6 +123,7 @@
 .advantages-list__item-image {
   width: 100%;
   vertical-align: middle;
+  object-fit: cover;
 
   @media (min-width: variables.$tablet-width) {
     flex-basis: calc(100% / 3 * 2);

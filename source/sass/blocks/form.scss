@@ -279,7 +279,6 @@
   &:focus + .form-label__text-control::before,
   &:focus + .form-label__text-control--checkbox::before {
     background-color: var(--input-main);
-    outline: 2px solid var(--text-main);
   }
 }
 
