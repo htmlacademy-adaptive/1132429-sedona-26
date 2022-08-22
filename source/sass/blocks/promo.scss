@@ -13,6 +13,10 @@
   text-align: center;
   padding: 90px 19px 85px;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/background/bg-mobile@2x.jpg") no-repeat center / cover;
+  }
+
   &::after {
     position: absolute;
     display: block;
@@ -27,6 +31,11 @@
   @media (min-width: variables.$tablet-width) {
     min-height: 518px;
     padding: 77px 153px 91px;
+    background: url("../img/background/bg-desktop.jpg") no-repeat center / cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background/bg-desktop@2x.jpg") no-repeat center / cover;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
