@@ -61,6 +61,11 @@
 .promo__image {
   display: block;
   margin: 0 auto 0;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 461px;
+    height: 350px;
+  }
 }
 
 .promo__title {
