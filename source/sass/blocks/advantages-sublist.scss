@@ -32,6 +32,7 @@
     @media (min-width: variables.$tablet-width) {
       width: 75px;
       height: 72px;
+      background: url("../img/icons/icon-house-tablet.svg") no-repeat center;
       top: 60px;
       left: calc(50% - 75px / 2);
     }
@@ -43,6 +44,7 @@
     @media (min-width: variables.$tablet-width) {
       width: 76px;
       height: 68px;
+      background: url("../img/icons/icon-burger-tablet.svg") no-repeat center;
       top: 63px;
       left: calc(50% - 76px / 2);
     }
@@ -54,6 +56,7 @@
     @media (min-width: variables.$tablet-width) {
       width: 64px;
       height: 75px;
+      background: url("../img/icons/icon-gift-tablet.svg") no-repeat center;
       top: 57px;
       left: calc(50% - 64px / 2);
     }

@@ -51,8 +51,14 @@
               <h3 class="advantages-list__title advantages-title">Настоящий городок</h3>
               <p class="advantages-list__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img class="advantages-list__item-image" src="./img/content/photo-city@1x.jpg" alt="Фото города Седона."
-              width="320" height="260">
+            <div class="advantage-list__wrapper-image">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./img/content/index/photo-city-desktop.jpg 1x, ./img/content/index/photo-city-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="./img/content/index/photo-city-tablet.jpg 1x, ./img/content/index/photo-city-tablet@2x.jpg 2x">
+                <img class="advantages-list__item-image" src="./img/content/index/photo-city-phone.jpg" srcset="./img/content/index/photo-city-phone@2x.jpg 2x" alt="Фото города Седона."
+                width="320" height="260">
+              </picture>
+            </div>
             <ul class="advantages-list__sublist advantages-sublist">
               <li class="advantages-sublist__item advantages-sublist__item--housing">
                 <h4 class="advantages-sublist__title advantages-title">Жилье</h4>
@@ -69,8 +75,14 @@
             </ul>
           </li>
           <li class="advantages-list__item">
-            <img class="advantages-list__item-image" src="./img/content/photo-bridge@1x.jpg" alt="Фото моста дьявола."
-              width="320" height="260">
+            <div class="advantage-list__wrapper-image">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./img/content/index/photo-bridge-desktop.jpg 1x, ./img/content/index/photo-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="./img/content/index/photo-bridge-tablet.jpg 1x, ./img/content/index/photo-bridge-tablet@2x.jpg 2x">
+                <img class="advantages-list__item-image" src="./img/content/index/photo-bridge-phone.jpg" srcset="./img/content/index/photo-bridge-phone@2x.jpg 2x" alt="Фото моста дьявола."
+                width="320" height="260">
+              </picture>
+            </div>
             <div class="advantages-list__container advantages-list__container--theme-light">
               <h3 class="advantages-list__title advantages-title">Там есть мост дьявола</h3>
               <p class="advantages-list__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
