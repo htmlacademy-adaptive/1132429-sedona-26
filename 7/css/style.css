@@ -685,7 +685,7 @@ img {
   .advantages-sublist__item--housing::before {
     width: 75px;
     height: 72px;
-    background: url("../img/icons/icon-house-tablet.svg") no-repeat center;
+    background-size: 75px 72px;
     top: 60px;
     left: calc(50% - 37.5px);
   }
@@ -697,7 +697,7 @@ img {
   .advantages-sublist__item--food::before {
     width: 76px;
     height: 68px;
-    background: url("../img/icons/icon-burger-tablet.svg") no-repeat center;
+    background-size: 76px 68px;
     top: 63px;
     left: calc(50% - 38px);
   }
@@ -709,7 +709,7 @@ img {
   .advantages-sublist__item--souvenir::before {
     width: 64px;
     height: 75px;
-    background: url("../img/icons/icon-gift-tablet.svg") no-repeat center;
+    background-size: 64px 75px;
     top: 57px;
     left: calc(50% - 32px);
   }
