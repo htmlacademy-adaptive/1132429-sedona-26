@@ -91,9 +91,34 @@
   }
 }
 
-.photo-list__item-image {
+.photo-list__wrapper-image {
+  display: block;
   width: 100%;
+  height: 100%;
+
+  @media (min-width: variables.$tablet-width) {
+    height: auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    height: 100%;
+  }
+}
+
+.photo-list__item-image {
+  display: block;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    height: auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .photo-list__title {
@@ -128,10 +153,7 @@
   display: block;
   width: 23px;
   height: 21px;
-
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 
 .photo-list__counter {

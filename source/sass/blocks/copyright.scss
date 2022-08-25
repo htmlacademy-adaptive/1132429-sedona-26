@@ -15,18 +15,26 @@
 
   &:hover {
     color: var(--brand-color);
+
+    .copyright__icon {
+      fill: var(--brand-color);
+    }
+  }
+
+  &:focus {
+    color: var(--brand-color);
+
+    .copyright__icon {
+      fill: var(--brand-color);
+    }
   }
 
   &:active {
     color: var(--copyright-active);
-  }
 
-  &:hover .copyright__icon {
-    fill: var(--brand-color);
-  }
-
-  &:active .copyright__icon {
-    fill: var(--copyright-active);
+    .copyright__icon {
+      fill: var(--copyright-active);
+    }
   }
 }
 

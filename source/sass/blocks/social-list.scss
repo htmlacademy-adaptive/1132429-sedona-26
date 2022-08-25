@@ -22,6 +22,10 @@
     background-color: var(--brand-color-hover);
   }
 
+  &:focus {
+    background-color: var(--brand-color-hover);
+  }
+
   &:active {
     background-color: var(--brand-color-active);
   }
