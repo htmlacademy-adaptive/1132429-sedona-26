@@ -59,6 +59,12 @@
       display: none;
     }
 
+    &:nth-of-type(2n) {
+      .advantage-list__wrapper-image {
+        order: -1;
+      }
+    }
+
     &--size-xs {
       flex-basis: calc(100% / 3);
     }
