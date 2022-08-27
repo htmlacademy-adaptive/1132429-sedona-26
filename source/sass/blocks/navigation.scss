@@ -144,8 +144,10 @@
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    background-color: var(--bg-color);
   }
 }
 
@@ -178,7 +180,8 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    flex-basis: 25%;
+    flex-basis: 20%;
+    min-width: 153px;
     min-height: 56px;
     margin-bottom: 0;
     background-color: var(--bg-color);
@@ -191,12 +194,13 @@
     }
 
     &:nth-child(2) {
-      margin-right: 156px;
+      margin-right: 153px;
     }
   }
 
   @media (min-width: variables.$desktop-width) {
-    flex-basis: 25%;
+    flex-basis: 20%;
+    min-width: 240px;
 
     &:nth-child(2) {
       margin-right: 240px;
