@@ -503,6 +503,11 @@ img {
     display: none;
   }
 }
+@media (min-width: 768px) and (min-width: 1200px) {
+  .promo__title {
+    padding: 0 300px;
+  }
+}
 
 .promo__description {
   color: var(--text-secondary);
@@ -520,6 +525,7 @@ img {
 @media (min-width: 1200px) {
   .promo__description {
     padding: 0 358px;
+    margin: 0 auto 45px;
   }
 }
 
@@ -602,14 +608,6 @@ img {
   min-height: 168px;
   background-color: var(--bg-color-secondary);
 }
-.advantages-list__container--theme-light {
-  min-height: 191px;
-  color: var(--text-accent);
-  background-color: var(--brand-color);
-}
-.advantages-list__container--theme-light::after {
-  display: none;
-}
 .advantages-list__container::after {
   display: block;
   position: absolute;
@@ -620,6 +618,14 @@ img {
   left: 18px;
   right: 18px;
   bottom: 1px;
+}
+.advantages-list__container--theme-light {
+  min-height: 191px;
+  color: var(--text-accent);
+  background-color: var(--brand-color);
+}
+.advantages-list__container--theme-light::after {
+  display: none;
 }
 .advantages-list__container::before {
   display: block;
@@ -1432,7 +1438,7 @@ img {
   width: 60px;
   height: 60px;
   border: none;
-  background: transparent url("../img/icons/play-icon.svg") no-repeat center;
+  background: transparent url("../img/icons/icon-play.svg") no-repeat center;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
 }
@@ -1666,11 +1672,11 @@ img {
 }
 
 .form__label--phone::after {
-  background: var(--input-icon-bg) url("../img/icons/phone-icon.svg") no-repeat center;
+  background: var(--input-icon-bg) url("../img/icons/icon-phone.svg") no-repeat center;
 }
 
 .form__label--email::after {
-  background: var(--input-icon-bg) url("../img/icons/mail-icon.svg") no-repeat center;
+  background: var(--input-icon-bg) url("../img/icons/icon-mail.svg") no-repeat center;
 }
 
 .form__label-control {
