@@ -55,7 +55,7 @@
 
   @media (min-width: variables.$tablet-width) {
     min-width: 90%;
-    margin: 0 auto 47px;
+    margin: 0 auto 49px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -81,6 +81,11 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 21px;
     padding: 0 124px;
+    margin: 0 auto 29px;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -93,6 +98,7 @@
 
   @media (min-width: variables.$tablet-width) {
     padding: 0 124px;
+    margin: 0 auto 55px;
   }
 
   @media (min-width: variables.$desktop-width) {
