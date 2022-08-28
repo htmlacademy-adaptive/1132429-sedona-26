@@ -88,16 +88,6 @@
   min-height: 168px;
   background-color: var(--bg-color-secondary);
 
-  &--theme-light {
-    min-height: 191px;
-    color: var(--text-accent);
-    background-color: var(--brand-color);
-
-    &::after {
-      display: none;
-    }
-  }
-
   &::after {
     display: block;
     position: absolute;
@@ -109,6 +99,17 @@
     right: 18px;
     bottom: 1px;
   }
+
+  &--theme-light {
+    min-height: 191px;
+    color: var(--text-accent);
+    background-color: var(--brand-color);
+
+    &::after {
+      display: none;
+    }
+  }
+
 
   &::before {
     display: block;
