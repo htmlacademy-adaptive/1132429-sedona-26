@@ -1,13 +1,13 @@
 @use "../global/variables.scss";
 
 .copyright {
-  min-width: 143px;
+  min-width: 130px;
 }
 
 .copyright__link {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-family: inherit;
   color: var(--text-main);
   text-decoration: none;

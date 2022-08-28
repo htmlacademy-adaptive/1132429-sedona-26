@@ -46,7 +46,15 @@
   }
 
   &:last-of-type .advantages-list__container {
-    border-bottom: none;
+    &::after {
+      display: none;
+    }
+  }
+
+  &--size-xs {
+    .advantages-list__container {
+      padding: 25px 35px;
+    }
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -72,34 +80,51 @@
 }
 
 .advantages-list__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 11px;
-  padding: 10px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 37px 19px;
   min-height: 168px;
-  place-content: center;
-  justify-items: center;
   background-color: var(--bg-color-secondary);
-  border-bottom: 1px solid var(--list-border);
 
   &--theme-light {
     min-height: 191px;
     color: var(--text-accent);
     background-color: var(--brand-color);
-    border-bottom: none;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: auto;
+    height: 1px;
+    background-color: var(--list-border);
+    left: 18px;
+    right: 18px;
+    bottom: -1px;
   }
 
   &::before {
     display: block;
     counter-increment: advantages;
     content: "— №" counter(advantages) " —";
-    grid-row: 2 / 3;
+    text-align: center;
+    margin: 0 auto 10px;
   }
 
   @media (min-width: variables.$tablet-width) {
     flex-basis: 100%;
     min-width: 256px;
-    border-bottom: none;
+
+    &::after {
+      display: none;
+    }
 
     &--theme-light {
       flex-basis: calc(100% / 3);
@@ -112,7 +137,8 @@
 }
 
 .advantages-list__title {
-  margin: 0;
+  order: -1;
+  margin: 0 auto;
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
@@ -121,7 +147,7 @@
 }
 
 .advantages-list__description {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   text-transform: uppercase;
   text-align: center;
@@ -150,8 +176,8 @@
 }
 
 .advantages-list__sublist {
-  margin: 23px auto 52px;
-  padding: 0 18px;
+  margin: 23px auto 30px;
+  padding: 0 10px 0 18px;
 
   @media (min-width: variables.$tablet-width) {
     margin: 0;
