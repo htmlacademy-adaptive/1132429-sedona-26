@@ -9,12 +9,12 @@
 .promo__header {
   min-height: 389px;
   position: relative;
-  background: url("../img/background/bg-mobile.jpg") no-repeat center / cover;
+  background: var(--bg-layer) url("../img/background/bg-mobile.jpg") no-repeat center / cover;
   text-align: center;
   padding: 90px 19px 85px;
 
   @media (min-resolution: 2dppx) {
-    background: url("../img/background/bg-mobile@2x.jpg") no-repeat center / cover;
+    background: var(--bg-layer) url("../img/background/bg-mobile@2x.jpg") no-repeat center / cover;
   }
 
   &::after {
@@ -23,18 +23,24 @@
     content: "";
     width: 100%;
     height: 57px;
-    background: url("../../img/background/intro-triangle.svg") no-repeat center;
+    background: url("../img/background/intro-triangle.svg") no-repeat center;
     left: 0;
     bottom: 0;
+
+    @media (min-width: variables.$desktop-width) {
+      height: 68px;
+      background-position: bottom;
+      background-size: 100%;
+    }
   }
 
   @media (min-width: variables.$tablet-width) {
     min-height: 518px;
     padding: 77px 153px 91px;
-    background: url("../img/background/bg-desktop.jpg") no-repeat center / cover;
+    background: var(--bg-layer) url("../img/background/bg-desktop.jpg") no-repeat center / cover;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/background/bg-desktop@2x.jpg") no-repeat center / cover;
+      background: var(--bg-layer) url("../img/background/bg-desktop@2x.jpg") no-repeat center / cover;
     }
   }
 
@@ -45,11 +51,11 @@
 
 .promo__wrapper {
   min-width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 
   @media (min-width: variables.$tablet-width) {
     min-width: 90%;
-    margin: 0 auto 47px;
+    margin: 0 auto 49px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -75,6 +81,15 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 21px;
     padding: 0 124px;
+    margin: 0 auto 29px;
+
+    br {
+      display: none;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 0 300px;
+    }
   }
 }
 
@@ -82,14 +97,16 @@
   color: var(--text-secondary);
   text-transform: uppercase;
   padding: 0 10px;
-  margin: 0 auto 55px;
+  margin: 0 auto 53px;
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
     padding: 0 124px;
+    margin: 0 auto 55px;
   }
 
   @media (min-width: variables.$desktop-width) {
     padding: 0 358px;
+    margin: 0 auto 45px;
   }
 }

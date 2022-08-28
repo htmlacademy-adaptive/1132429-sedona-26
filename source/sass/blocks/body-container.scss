@@ -1,5 +1,8 @@
 .body-container {
+  display: flex;
+  flex-direction: column;
   max-width: 1400px;
+  min-height: 100%;
   margin: 0 auto;
   background-color: var(--bg-color);
   box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);

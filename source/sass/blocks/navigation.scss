@@ -144,8 +144,10 @@
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    background-color: var(--bg-color);
   }
 }
 
@@ -178,7 +180,8 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    flex-basis: 25%;
+    flex-basis: 20%;
+    min-width: 153px;
     min-height: 56px;
     margin-bottom: 0;
     background-color: var(--bg-color);
@@ -190,15 +193,16 @@
       display: none;
     }
 
-    &--catalog {
-      margin-right: 156px;
+    &:nth-child(2) {
+      margin-right: 153px;
     }
   }
 
   @media (min-width: variables.$desktop-width) {
-    flex-basis: 25%;
+    flex-basis: 20%;
+    min-width: 240px;
 
-    &--catalog {
+    &:nth-child(2) {
       margin-right: 240px;
     }
   }
@@ -218,6 +222,8 @@
   &:focus {
     background-color: var(--brand-color-hover);
     offset: none;
+    position: relative;
+    z-index: 10;
   }
 
   &:active {
