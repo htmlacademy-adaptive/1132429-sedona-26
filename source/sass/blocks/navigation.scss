@@ -147,6 +147,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--bg-color);
   }
 }
@@ -180,7 +181,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    flex-basis: 20%;
+    flex-basis: calc((100% - 153px) / 4);
     min-width: 153px;
     min-height: 56px;
     margin-bottom: 0;
@@ -199,7 +200,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    flex-basis: 20%;
+    flex-basis: calc((100% - 240px) / 4);
     min-width: 240px;
 
     &:nth-child(2) {

@@ -154,7 +154,12 @@
   display: block;
   width: 23px;
   height: 21px;
+  color: var(--text-main);
   cursor: pointer;
+
+  @media (min-width: variables.$desktop-width) {
+    color: var(--text-accent);
+  }
 }
 
 .photo-list__counter {
