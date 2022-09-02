@@ -173,6 +173,10 @@
     outline: none;
     border-color: var(--input-main);
   }
+
+  &--disabled {
+    opacity: 0.1;
+  }
 }
 
 .form__label {
@@ -257,6 +261,10 @@
   &:active::before {
     background-color: var(--check-color);
   }
+
+  &--disabled::before {
+    opacity: 0.1;
+  }
 }
 
 .form__radio,
@@ -317,6 +325,10 @@
     background-color: var(--bg-color);
     outline: none;
     border-color: var(--input-main);
+  }
+
+  &--disabled {
+    opacity: 0.1;
   }
 }
 

@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="keywords" content="отдых, поиск отелей, отпуск, бронирование отелей">
+  <meta name="description" content="Сервис по поиску отелей Седона">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -15,7 +17,9 @@
 <body>
   <div class="body-container">
     <header class="header">
-      <a class="logo" href="index.html"><img src="./img/logo/logo.svg" alt="Логотип сайта Седона." width="185" height="96"></a>
+      <a class="logo" href="index.html">
+        <img src="./img/logo/logo.svg" alt="Логотип сайта Седона." width="185" height="96">
+      </a>
       <nav class="header__navigation navigation navigation--closed navigation--nojs">
         <button class="navigation__toggle" aria-label="Открыть меню."></button>
         <div class="navigation__wrapper">
@@ -38,15 +42,17 @@
     </header>
     <main class="main-container">
       <section class="photos">
-        <header class="photos__header"><img class="photos__image" src="./img/content/sedona-form.svg" alt="Седона."
-            width="229" height="39"></header>
+        <header class="hero__header">
+          <img class="hero__image" src="./img/content/sedona-form.svg" alt="Логотип Седоны."
+            width="229" height="39">
+        </header>
         <div class="photos__wrapper">
           <h1 class="photos__title title">Фото и видео</h1>
           <p class="photos__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
             политике и экономике.</p>
           <div class="photos__list photo-list">
             <article class="photo-list__item">
-              <div class="photo-list__wrapper-image">
+              <a class="photo-list__wrapper-image" href="#">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/content/catalog/photo-1-desktop.webp 1x, ./img/content/catalog/photo-1-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/content/catalog/photo-1-tablet.webp 1x, ./img/content/catalog/photo-1-tablet@2x.webp 2x">
@@ -55,7 +61,7 @@
                   <source media="(min-width: 768px)" srcset="./img/content/catalog/photo-1-tablet.jpg 1x, ./img/content/catalog/photo-1-tablet@2x.jpg 2x">
                   <img class="photo-list__item-image" src="./img/content/catalog/photo-1-mobile.jpg" srcset="./img/content/catalog/photo-1-mobile@2x.jpg 2x" alt="Просторы Седоны." width="280" height="280">
                 </picture>
-              </div>
+              </a>
               <div class="photo-list__item-wrapper">
                 <div class="photo-list__item-description">
                   <h3 class="photo-list__title">Неродные просторы</h3>
@@ -72,7 +78,7 @@
               </div>
             </article>
             <article class="photo-list__item">
-              <div class="photo-list__wrapper-image">
+              <a class="photo-list__wrapper-image" href="#">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/content/catalog/photo-2-desktop.webp 1x, ./img/content/catalog/photo-2-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/content/catalog/photo-2-tablet.webp 1x, ./img/content/catalog/photo-2-tablet@2x.webp 2x">
@@ -81,7 +87,7 @@
                   <source media="(min-width: 768px)" srcset="./img/content/catalog/photo-2-tablet.jpg 1x, ./img/content/catalog/photo-2-tablet@2x.jpg 2x">
                   <img class="photo-list__item-image" src="./img/content/catalog/photo-2-mobile.jpg" srcset="./img/content/catalog/photo-2-mobile@2x.jpg 2x" alt="Природа Седоны." width="280" height="280">
                 </picture>
-              </div>
+              </a>
               <div class="photo-list__item-wrapper">
                 <div class="photo-list__item-description">
                   <h3 class="photo-list__title">Местная растительность</h3>
@@ -98,7 +104,7 @@
               </div>
             </article>
             <article class="photo-list__item">
-              <div class="photo-list__wrapper-image">
+              <a class="photo-list__wrapper-image" href="#">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/content/catalog/photo-3-desktop.webp 1x, ./img/content/catalog/photo-3-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/content/catalog/photo-3-tablet.webp 1x, ./img/content/catalog/photo-3-tablet@2x.webp 2x">
@@ -107,7 +113,7 @@
                   <source media="(min-width: 768px)" srcset="./img/content/catalog/photo-3-tablet.jpg 1x, ./img/content/catalog/photo-3-tablet@2x.jpg 2x">
                   <img class="photo-list__item-image" src="./img/content/catalog/photo-3-mobile.jpg" srcset="./img/content/catalog/photo-3-mobile@2x.jpg 2x" alt="Дорога на север Седоны." width="280" height="280">
                 </picture>
-              </div>
+              </a>
               <div class="photo-list__item-wrapper photo-list__item-wrapper--theme-dark">
                 <div class="photo-list__item-description">
                   <h3 class="photo-list__title">Дорога на север</h3>
@@ -124,16 +130,16 @@
               </div>
             </article>
             <article class="photo-list__item">
-              <div class="photo-list__wrapper-image">
+              <a class="photo-list__wrapper-image" href="#">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/content/catalog/photo-4-desktop.webp 1x, ./img/content/catalog/photo-4-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/content/catalog/photo-4-tablet.webp 1x, ./img/content/catalog/photo-4-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="./img/content/catalog/photo-4-mobile.webp 1x, ./img/content/catalog/photo-4-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="./img/content/catalog/photo-4-desktop.jpg 1x, ./img/content/catalog/photo-4-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="./img/content/catalog/photo-4-tablet.jpg 1x, ./img/content/catalog/photo-4-tablet@2x.jpg 2x">
-                  <img class="photo-list__item-image" src="./img/content/catalog/photo-4-mobile.jpg" srcset="./img/content/catalog/photo-4-mobile@2x.jpg 2x" alt="Мост Дьявола." width="280" height="280">
+                  <img class="photo-list__item-image" src="./img/content/catalog/photo-4-mobile.jpg" srcset="./img/content/catalog/photo-4-mobile@2x.jpg 2x" alt="Мост Дьявола в Седоне." width="280" height="280">
                 </picture>
-              </div>
+              </a>
               <div class="photo-list__item-wrapper">
                 <div class="photo-list__item-description">
                   <h3 class="photo-list__title">Мост дьявола</h3>
@@ -172,7 +178,7 @@
               <use xlink:href="./img/sprite.svg#icon-vk"></use>
             </svg>
           </a>
-          <a class="social-list__item button" href="https://t.me/htmlacademy" aria-label="Мы в Телеграме."target="_blank">
+          <a class="social-list__item button" href="https://t.me/htmlacademy" aria-label="Мы в Телеграме." target="_blank">
             <svg class="social-list__icon" width="24" height="24" aria-hidden="true" focusable="false">
               <use xlink:href="./img/sprite.svg#icon-telegram"></use>
             </svg>

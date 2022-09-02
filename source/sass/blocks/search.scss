@@ -75,10 +75,16 @@
 
 .search__map {
   width: 100%;
+  min-height: 350px;
+  background: var(--bg-color-secondary) url("../img/background/map-desktop.png") no-repeat center;
   margin: 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/map-desktop@2x.png");
+  }
 }
 
-.search_map-iframe {
+.search__map-iframe {
   display: block;
   width: 100%;
   border: none;
