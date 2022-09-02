@@ -28,12 +28,20 @@
   display: flex;
   position: relative;
   justify-content: center;
-  background: var(--bg-layer) url("../img/background/bg-mobile.jpg") no-repeat 0 100% / cover;
+  background-color: var(--bg-layer);
+  background-image: url("../img/background/bg-mobile.jpg");
+  background-image: image-set(url("../img/background/bg-mobile.webp") 1x,
+                    url("../img/background/bg-mobile.jpg") 1x);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: cover;
   min-height: 158px;
   margin-bottom: 33px;
 
   @media (min-resolution: 2dppx) {
-    background: var(--bg-layer) url("../img/background/bg-mobile@2x.jpg") no-repeat 0 100% / cover;
+    background-image: url("../img/background/bg-mobile@2x.jpg");
+    background-image: image-set(url("../img/background/bg-mobile@2x.webp") 2x,
+                      url("../img/background/bg-mobile@2x.jpg") 2x);
   }
 
   &::after {
@@ -55,11 +63,15 @@
 
   @media (min-width: variables.$tablet-width) {
     min-height: 290px;
-    background: var(--bg-layer) url("../img/background/bg-desktop.jpg") no-repeat 0 100% / cover;
+    background-image: url("../img/background/bg-desktop.jpg");
+    background-image: image-set(url("../img/background/bg-desktop.webp") 1x,
+                      url("../img/background/bg-desktop.jpg") 1x);
     margin-bottom: 62px;
 
     @media (min-resolution: 2dppx) {
-      background: var(--bg-layer) url("../img/background/bg-desktop@2x.jpg") no-repeat 0 100% / cover;
+      background-image: url("../img/background/bg-desktop@2x.jpg");
+      background-image: image-set(url("../img/background/bg-desktop@2x.webp") 2x,
+                        url("../img/background/bg-desktop@2x.jpg") 2x);
     }
   }
 

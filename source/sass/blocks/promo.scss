@@ -10,16 +10,19 @@
   min-height: 389px;
   position: relative;
   background-color: var(--bg-layer);
-  background-image: image-set(url("../img/background/bg-mobile.webp") type="image/webp", url("../img/background/bg-mobile.jpg") type="image/jpeg");
+  background-image: url("../img/background/bg-mobile.jpg");
+  background-image: image-set(url("../img/background/bg-mobile.webp") 1x,
+                    url("../img/background/bg-mobile.jpg") 1x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // background: var(--bg-layer) url("../img/background/bg-mobile.jpg") no-repeat center / cover;
   text-align: center;
   padding: 90px 19px 85px;
 
   @media (min-resolution: 2dppx) {
-    background: var(--bg-layer) url("../img/background/bg-mobile@2x.jpg") no-repeat center / cover;
+    background-image: url("../img/background/bg-mobile@2x.jpg");
+    background-image: image-set(url("../img/background/bg-mobile@2x.webp") 2x,
+                      url("../img/background/bg-mobile@2x.jpg") 2x);
   }
 
   &::after {
@@ -42,10 +45,14 @@
   @media (min-width: variables.$tablet-width) {
     min-height: 518px;
     padding: 77px 153px 91px;
-    background: var(--bg-layer) url("../img/background/bg-desktop.jpg") no-repeat center / cover;
+    background-image: url("../img/background/bg-desktop.jpg");
+    background-image: image-set(url("../img/background/bg-desktop.webp") 1x,
+                      url("../img/background/bg-desktop.jpg") 1x);
 
     @media (min-resolution: 2dppx) {
-      background: var(--bg-layer) url("../img/background/bg-desktop@2x.jpg") no-repeat center / cover;
+      background-image: url("../img/background/bg-desktop@2x.jpg");
+      background-image: image-set(url("../img/background/bg-desktop@2x.webp") 2x,
+                        url("../img/background/bg-desktop@2x.jpg") 2x);
     }
   }
 
