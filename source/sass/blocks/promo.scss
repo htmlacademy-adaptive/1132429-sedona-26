@@ -9,7 +9,12 @@
 .promo__header {
   min-height: 389px;
   position: relative;
-  background: var(--bg-layer) url("../img/background/bg-mobile.jpg") no-repeat center / cover;
+  background-color: var(--bg-layer);
+  background-image: image-set(url("../img/background/bg-mobile.webp") type="image/webp", url("../img/background/bg-mobile.jpg") type="image/jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // background: var(--bg-layer) url("../img/background/bg-mobile.jpg") no-repeat center / cover;
   text-align: center;
   padding: 90px 19px 85px;
 
