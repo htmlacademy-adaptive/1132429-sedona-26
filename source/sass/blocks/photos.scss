@@ -25,11 +25,11 @@
 }
 
 .photos__title {
-  margin: 0 auto 21px;
+  margin: 0 auto 24px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 30px;
-    margin: 0 auto 35px;
+    margin: 0 auto 32px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -40,16 +40,23 @@
 .photos__description {
   color: var(--text-secondary);
   text-transform: uppercase;
-  margin: 0 auto 20px;
+  margin: 0 auto 36px;
   text-align: center;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: variables.$tablet-width) {
-    margin: 0 auto 63px;
+    margin: 0 auto 81px;
+
+    br {
+      display: block;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 40px;
-    margin: 0 auto 65px;
+    margin: 0 auto 89px;
   }
 }
 

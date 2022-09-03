@@ -12,7 +12,7 @@
   background-position: 0 100%;
   background-size: cover;
   min-height: 158px;
-  margin-bottom: 33px;
+  margin-bottom: 39px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background/bg-mobile@2x.jpg");
@@ -39,21 +39,30 @@
 
   @media (min-width: variables.$tablet-width) {
     min-height: 290px;
-    background-image: url("../img/background/bg-desktop.jpg");
-    background-image: image-set(url("../img/background/bg-desktop.webp") 1x,
-                      url("../img/background/bg-desktop.jpg") 1x);
-    margin-bottom: 62px;
+    background-image: url("../img/background/bg-tablet.jpg");
+    background-image: image-set(url("../img/background/bg-tablet.webp") 1x,
+                      url("../img/background/bg-tablet.jpg") 1x);
+    margin-bottom: 66px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/bg-desktop@2x.jpg");
-      background-image: image-set(url("../img/background/bg-desktop@2x.webp") 2x,
-                        url("../img/background/bg-desktop@2x.jpg") 2x);
+      background-image: url("../img/background/bg-tablet@2x.jpg");
+      background-image: image-set(url("../img/background/bg-tablet@2x.webp") 2x,
+                        url("../img/background/bg-tablet@2x.jpg") 2x);
     }
   }
 
   @media (min-width: variables.$desktop-width) {
     min-height: 301px;
-    margin-bottom: 100px;
+    background-image: url("../img/background/bg-desktop.jpg");
+    background-image: image-set(url("../img/background/bg-desktop.webp") 1x,
+                      url("../img/background/bg-desktop.jpg") 1x);
+    margin-bottom: 98px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/bg-desktop@2x.jpg");
+    background-image: image-set(url("../img/background/bg-desktop@2x.webp") 2x,
+                      url("../img/background/bg-desktop@2x.jpg") 2x);
   }
 }
 

@@ -14,12 +14,12 @@
 
   @media (min-width: variables.$tablet-width) {
     min-width: 90%;
-    padding: 58px 60px 40px;
+    padding: 56px 60px 40px;
   }
 
   @media (min-width: variables.$desktop-width) {
     min-width: 75%;
-    padding: 62px 40px 120px;
+    padding: 60px 40px 83px;
   }
 }
 
@@ -28,12 +28,11 @@
 
   @media (min-width: variables.$tablet-width) {
     font-size: 30px;
-    margin: 0 auto 34px;
+    margin: 0 auto 32px;
   }
 
   @media (min-width: variables.$desktop-width) {
     font-size: 30px;
-    margin: 0 auto 35px;
   }
 }
 
@@ -42,13 +41,22 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto 38px;
+  padding: 0 2px;
+
+  br {
+    display: none;
+  }
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 auto 66px;
+    margin: 0 auto 89px;
+
+    br {
+      display: block;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 auto 64px;
+    margin: 0 auto 88px;
   }
 }
 
@@ -84,10 +92,15 @@
   height: 60px;
   border: none;
   background: transparent url("../img/icons/icon-play.svg") no-repeat center;
-  top: calc(50% - 60px / 2);
-  left: calc(50% - 60px / 2);
+  top: calc(50% - 56px / 2);
+  left: calc(50% - 44px / 2);
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    top: calc(50% - 60px / 2);
+    left: calc(50% - 60px / 2);
   }
 }
