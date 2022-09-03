@@ -14,7 +14,7 @@
 
   @media (min-width: variables.$tablet-width) {
     min-width: 90%;
-    padding: 61px 0 0;
+    padding: 60px 0 0;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -33,7 +33,12 @@
 
   @media (min-width: variables.$tablet-width) {
     font-size: 30px;
-    margin: 0 auto 25px;
+    margin: 0 auto 31px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    font-size: 30px;
+    margin: 0 auto 32px;
   }
 }
 
@@ -44,13 +49,21 @@
   margin: 0 auto 32px;
   padding: 0 15px;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: variables.$tablet-width) {
-    padding: 0 167px;
-    margin: 0 auto 40px;
+    padding: 0 160px;
+    margin: 0 auto 43px;
+
+    br {
+      display: block;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 auto 45px;
+    margin: 0 auto 47px;
   }
 }
 

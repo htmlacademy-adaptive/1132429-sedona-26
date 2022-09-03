@@ -92,7 +92,7 @@
 
   @media (min-width: variables.$tablet-width) {
     font-size: 21px;
-    padding: 0 124px;
+    max-width: 520px;
     margin: 0 auto 29px;
 
     br {
@@ -100,6 +100,7 @@
     }
 
     @media (min-width: variables.$desktop-width) {
+      max-width: 100%;
       padding: 0 300px;
     }
   }
