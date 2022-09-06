@@ -36,6 +36,22 @@
   padding: 0;
   margin: 0 auto 64px;
 
+  &--contacts {
+    margin-bottom: 59px;
+  }
+
+  &--impressions {
+    margin-bottom: 50px;
+  }
+
+  &--attraction {
+    margin-bottom: 49px;
+  }
+
+  &--textarea {
+    margin-bottom: 54px;
+  }
+
   @media (min-width: variables.$tablet-width) {
     display: flex;
     flex-direction: column;
@@ -108,11 +124,11 @@
     display: block;
     content: "";
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 1px;
     background: var(--input-main);
     top: -24px;
-    left: 0;
+    left: -20px;
     right: 0;
   }
 
@@ -301,7 +317,8 @@
   width: 22px;
   height: 16px;
   background: url("../img/icons/checkbox-tick.svg") no-repeat center;
-  left: -2px;
+  top: 4px;
+  left: -4px;
 }
 
 .form__radio:checked + .form-label__text-control:active::after,
@@ -333,6 +350,7 @@
 }
 
 .form__button {
+  font-size: 21px;
   min-width: 281px;
   margin: 0 auto 3px;
   padding: 18px 33px 14px;
