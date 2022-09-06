@@ -9,6 +9,10 @@
 
 .feedback__header {
   margin-bottom: 36px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 64px;
+  }
 }
 
 .feedback__title {
@@ -17,6 +21,7 @@
 
   @media (min-width: variables.$tablet-width) {
     font-size: 30px;
+    margin-bottom: 22px;
   }
 }
 
@@ -26,6 +31,18 @@
   text-align: center;
   padding: 0 10px;
   margin: 0 auto 53px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 106px;
+
+    br {
+      display: block;
+    }
+  }
 }
 
 .feedback__form {
