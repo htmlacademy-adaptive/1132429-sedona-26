@@ -13,6 +13,10 @@
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 64px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 113px;
+  }
 }
 
 .feedback__title {
@@ -22,6 +26,10 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 30px;
     margin-bottom: 22px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 32px;
   }
 }
 
@@ -42,6 +50,10 @@
     br {
       display: block;
     }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 70px;
   }
 }
 

@@ -21,18 +21,24 @@
     padding: 0 60px;
 
     @media (min-width: variables.$desktop-width) {
-      gap: 73px 128px;
-      padding: 0 40px;
+      gap: 58px 78px;
+      padding: 0 120px;
     }
   }
 }
 
-.form__container {
+.form__label-wrapper {
   display: grid;
-  position: relative;
   width: 100%;
   grid-template-columns: 1fr;
   gap: 16px;
+}
+
+.form__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  width: 100%;
   border: none;
   padding: 0;
   margin: 0 auto 64px;
@@ -43,14 +49,49 @@
 
   &--impressions {
     margin-bottom: 50px;
+
+    @media (min-width: variables.$tablet-width) {
+      .form__label-wrapper {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin: 0 36px;
+      }
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      .form__label-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        margin: 0 12px 0 52px;
+      }
+    }
   }
 
   &--attraction {
     margin-bottom: 49px;
+
+    @media (min-width: variables.$tablet-width) {
+      .form__label-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 32px;
+        padding: 0 84px;
+      }
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      .form__label-wrapper {
+        grid-template-columns: repeat(4, auto);
+        gap: 20px 64px;
+        padding: 0 44px;
+      }
+    }
   }
 
   &--textarea {
-    margin-bottom: 54px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -60,21 +101,19 @@
 
     &:nth-child(n+3) {
       grid-column: 1 / -1;
+
+      .form__title {
+        padding: 0 125px;
+      }
     }
 
     &--impressions {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      padding: 0 36px;
+      flex-direction: row;
+      margin-bottom: -2px;
     }
 
     &--attraction {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px 32px;
-      padding: 0 84px;
-      margin-bottom: -9px;
+      margin-bottom: -7px;
     }
 
     &:first-of-type::before {
@@ -99,22 +138,19 @@
 
   @media (min-width: variables.$desktop-width) {
     &--impressions {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      padding: 0 53px;
+      margin-bottom: 16px;
     }
 
     &--attraction {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px 64px;
+      margin-bottom: 29px;
     }
 
     &--textarea {
-      padding: 0 96px;
+      margin-bottom: -9px;
     }
 
     &:first-of-type::before {
-      right: -66px;
+      right: -14px;
     }
   }
 }
@@ -135,6 +171,8 @@
   }
 
   @media (min-width: variables.$tablet-width) {
+    position: relative;
+    width: 100%;
     font-size: 21px;
     margin: 0 auto 28px;
 
@@ -146,7 +184,7 @@
       width: 123px;
       height: 1px;
       background-color: var(--form-deco);
-      top: 12px;
+      top: 50%;
     }
 
     &::after {
@@ -158,7 +196,7 @@
     }
 
     &--contacts {
-      margin: 0 auto 28px -3px;
+      margin: 0 auto 28px -11px;
     }
   }
 
@@ -168,8 +206,21 @@
       width: 280px;
     }
 
+    &--impressions {
+      margin-bottom: 44px;
+    }
+
+    &--attraction {
+      margin-bottom: 59px;
+    }
+
+    &--greetings {
+      padding: 0 0 0 12px;
+    }
+
     &--contacts {
-      margin: 0 auto 30px 30px;
+      margin: 0 auto 28px;
+      padding: 0 63px 0 0;
     }
   }
 }
@@ -222,6 +273,10 @@
     &--phone,
     &--email {
       margin-left: 0;
+    }
+
+    &--greetings {
+      margin-right: 50px;
     }
   }
 }
@@ -338,7 +393,7 @@
 
 .form__textarea {
   min-width: 280px;
-  min-height: 158px;
+  min-height: 150px;
   padding: 12px;
   border: 4px solid transparent;
   background-color: var(--input);
@@ -357,6 +412,14 @@
   &--disabled {
     opacity: 0.1;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 158px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 96px;
+  }
 }
 
 .form__button {
@@ -373,6 +436,7 @@
 
   @media (min-width: variables.$desktop-width) {
     min-width: 384px;
+    margin-left: 96px;
   }
 }
 
@@ -386,5 +450,9 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 14px;
     margin: 22px 0 0 auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 96px;
   }
 }
