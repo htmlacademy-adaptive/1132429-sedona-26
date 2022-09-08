@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="keywords" content="отдых, поиск отелей, отпуск, бронирование отелей">
+  <meta name="description" content="Сервис по поиску отелей Седона">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -9,11 +11,15 @@
   <link rel="apple-touch-icon" href="./img/favicons/favicon-apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 <body>
   <div class="body-container">
     <header class="header">
-      <a class="logo" href="index.html"><img src="./img/logo/logo.svg" alt="Логотип сайта Седона." width="185" height="96"></a>
+      <a class="logo" href="index.html">
+        <img src="./img/logo/logo.svg" alt="Логотип сайта Седона." width="185" height="96">
+      </a>
       <nav class="header__navigation navigation navigation--closed navigation--nojs">
         <button class="navigation__toggle" aria-label="Открыть меню."></button>
         <div class="navigation__wrapper">
@@ -36,72 +42,80 @@
     </header>
     <main class="main-container">
       <section class="feedback">
-        <header class="feedback__header photos__header">
-          <img class="photos__image" src="./img/content/sedona-form.svg" alt="Седона." width="229" height="39">
+        <header class="feedback__header hero__header">
+          <img class="hero__image" src="./img/content/sedona-form.svg" alt="Логотип Седоны." width="229" height="39">
         </header>
         <h1 class="feedback__title title">Оставьте свой отзыв</h1>
-        <p class="feedback__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <p class="feedback__description">Помогите нашим отелям стать лучше! оставьте отзыв о них,&nbsp;</br> а также о посещенных вами достопримечательностях</p>
         <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
           <div class="form__wrapper">
             <fieldset class="form__container">
-              <legend class="form__title form-title">Представьтесь:</legend>
-              <label class="form__label label" for="name">
-                <span class="form-label__text">Имя*:</span>
-                <input class="form__input input" type="text" name="name" id="name" placeholder="Пётр" required>
-              </label>
-              <label class="form__label label" for="surname">
-                <span class="form-label__text">Фамилия*:</span>
-                <input class="form__input input" type="text" name="surname" id="surname" placeholder="Пустота" required>
-              </label>
-              <label class="form__label label" for="patronymic">
-                <span class="form-label__text">Отчество:</span>
-                <input class="form__input input" type="text" name="patronymic" id="patronymic" placeholder="Викторович">
-              </label>
+              <legend class="form__title form__title--greetings form-title">Представьтесь:</legend>
+              <div class="form__label-wrapper">
+                <label class="form__label form__label--greetings label" for="name">
+                  <span class="form-label__text">Имя*:</span>
+                  <input class="form__input input" type="text" name="name" id="name" placeholder="Пётр" required>
+                </label>
+                <label class="form__label form__label--greetings label" for="surname">
+                  <span class="form-label__text">Фамилия*:</span>
+                  <input class="form__input input" type="text" name="surname" id="surname" placeholder="Пустота" required>
+                </label>
+                <label class="form__label form__label--greetings label" for="patronymic">
+                  <span class="form-label__text">Отчество:</span>
+                  <input class="form__input input" type="text" name="patronymic" id="patronymic" placeholder="Викторович">
+                </label>
+              </div>
             </fieldset>
-            <fieldset class="form__container">
+            <fieldset class="form__container form__container--contacts">
               <legend class="form__title form__title--contacts form-title">Контактная информация:</legend>
-              <label class="form__label form__label--phone label" for="phone">
-                <span class="form-label__text">Контактный телефон*:</span>
-                <input class="form__input form__input--phone input" type="number" name="phone" id="phone" placeholder="Введите телефон" required>
-              </label>
-              <label class="form__label form__label--email label" for="email">
-                <span class="form-label__text">Электронная почта*:</span>
-                <input class="form__input form__input--email input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
-              </label>
+              <div class="form__label-wrapper">
+                <label class="form__label form__label--phone label" for="phone">
+                  <span class="form-label__text">Контактный телефон*:</span>
+                  <input class="form__input form__input--phone input" type="number" name="phone" id="phone" placeholder="Введите телефон" required>
+                </label>
+                <label class="form__label form__label--email label" for="email">
+                  <span class="form-label__text">Электронная почта*:</span>
+                  <input class="form__input form__input--email input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+                </label>
+              </div>
             </fieldset>
             <fieldset class="form__container form__container--impressions">
-              <legend class="form__title form-title">Ваше общее впечатление:</legend>
-              <label class="form__label-control label-control" for="positive">
-                <input class="form__radio input-radio" type="radio" name="emotion" id="positive" checked="checked">
-                <span class="form-label__text-control">Скорее положительное</span>
-              </label>
-              <label class="form__label-control label-control" for="negative">
-                <input class="form__radio input-radio" type="radio" name="emotion" id="negative">
-                <span class="form-label__text-control">Скорее отрицательное</span>
-              </label>
-              <label class="form__label-control label-control" for="neutral">
-                <input class="form__radio input-radio" type="radio" name="emotion" id="neutral">
-                <span class="form-label__text-control">Затрудняюсь ответить</span>
-              </label>
+              <legend class="form__title form__title--impressions form-title">Ваше общее впечатление:</legend>
+              <div class="form__label-wrapper">
+                <label class="form__label-control label-control" for="positive">
+                  <input class="form__radio input-radio" type="radio" name="emotion" id="positive" checked="checked">
+                  <span class="form-label__text-control">Скорее положительное</span>
+                </label>
+                <label class="form__label-control label-control" for="negative">
+                  <input class="form__radio input-radio" type="radio" name="emotion" id="negative">
+                  <span class="form-label__text-control">Скорее отрицательное</span>
+                </label>
+                <label class="form__label-control label-control" for="neutral">
+                  <input class="form__radio input-radio" type="radio" name="emotion" id="neutral">
+                  <span class="form-label__text-control">Затрудняюсь ответить</span>
+                </label>
+              </div>
             </fieldset>
             <fieldset class="form__container form__container--attraction">
-              <legend class="form__title form-title">Посещенные достопримечательности:</legend>
-              <label class="form__label-control label-control" for="bridge">
-                <input class="form__checkbox input-checkbox" type="checkbox" name="bridge" id="bridge" checked="checked">
-                <span class="form-label__text-control form-label__text-control--checkbox">Мост Дьявола</span>
-              </label>
-              <label class="form__label-control label-control" for="mountain">
-                <input class="form__checkbox input-checkbox" type="checkbox" name="mountain" id="mountain" checked="checked">
-                <span class="form-label__text-control form-label__text-control--checkbox">Гора-Колокол</span>
-              </label>
-              <label class="form__label-control label-control" for="park">
-                <input class="form__checkbox input-checkbox" type="checkbox" name="park" id="park" checked="checked">
-                <span class="form-label__text-control form-label__text-control--checkbox">Слайд-парк</span>
-              </label>
-              <label class="form__label-control label-control" for="rock">
-                <input class="form__checkbox input-checkbox" type="checkbox" name="rock" id="rock">
-                <span class="form-label__text-control form-label__text-control--checkbox">Красные скалы</span>
-              </label>
+              <legend class="form__title form__title--attraction form-title">Посещенные&nbsp;</br> достопримечательности:</legend>
+              <div class="form__label-wrapper">
+                <label class="form__label-control label-control" for="bridge">
+                  <input class="form__checkbox input-checkbox" type="checkbox" name="bridge" id="bridge" checked="checked">
+                  <span class="form-label__text-control form-label__text-control--checkbox">Мост Дьявола</span>
+                </label>
+                <label class="form__label-control label-control" for="mountain">
+                  <input class="form__checkbox input-checkbox" type="checkbox" name="mountain" id="mountain" checked="checked">
+                  <span class="form-label__text-control form-label__text-control--checkbox">Гора-Колокол</span>
+                </label>
+                <label class="form__label-control label-control" for="park">
+                  <input class="form__checkbox input-checkbox" type="checkbox" name="park" id="park" checked="checked">
+                  <span class="form-label__text-control form-label__text-control--checkbox">Слайд-парк</span>
+                </label>
+                <label class="form__label-control label-control" for="rock">
+                  <input class="form__checkbox input-checkbox" type="checkbox" name="rock" id="rock">
+                  <span class="form-label__text-control form-label__text-control--checkbox">Красные скалы</span>
+                </label>
+              </div>
             </fieldset>
             <fieldset class="form__container form__container--textarea">
               <legend class="form__title form-title">Опишите свои эмоции:</legend>
@@ -144,21 +158,25 @@
       </div>
     </footer>
   </div>
-  <div class="modal modal--error modal--close">
-    <div class="modal__wrapper modal__wrapper--error">
-      <h2 class="modal__title title">Что-то пошло не так!</h2>
-      <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="modal__button button button--main" type="button">ОК</button>
+  <div class="modal-container modal--close">
+    <div class="modal modal--error">
+      <div class="modal__wrapper modal__wrapper--error">
+        <h2 class="modal__title title">Что-то пошло не так!</h2>
+        <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="modal__button button button--main" type="button">ОК</button>
+      </div>
     </div>
   </div>
-  <div class="modal modal--close">
-    <div class="modal__wrapper">
-      <div class="modal__wrapper--accept">
-        <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
-        <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      </div>
-      <div class="modal__button-wrapper">
-        <button class="modal__button modal__button--accept button button--main" type="button">Закрыть окно</button>
+  <div class="modal-container modal--close">
+    <div class="modal">
+      <div class="modal__wrapper">
+        <div class="modal__wrapper-accept">
+          <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
+          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
+        <div class="modal__button-wrapper">
+          <button class="modal__button modal__button--accept button button--main" type="button">Закрыть окно</button>
+        </div>
       </div>
     </div>
   </div>

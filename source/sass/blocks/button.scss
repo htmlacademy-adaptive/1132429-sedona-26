@@ -35,4 +35,9 @@
   &:disabled {
     background-color: var(--button-disabled);
   }
+
+  &-disabled {
+    color: var(--text-accent);
+    background-color: var(--button-disabled);
+  }
 }

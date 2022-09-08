@@ -9,12 +9,20 @@
 .promo__header {
   min-height: 389px;
   position: relative;
-  background: var(--bg-layer) url("../img/background/bg-mobile.jpg") no-repeat center / cover;
+  background-color: var(--bg-layer);
+  background-image: url("../img/background/bg-mobile.jpg");
+  background-image: image-set(url("../img/background/bg-mobile.webp") 1x,
+                    url("../img/background/bg-mobile.jpg") 1x);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
   padding: 90px 19px 85px;
 
   @media (min-resolution: 2dppx) {
-    background: var(--bg-layer) url("../img/background/bg-mobile@2x.jpg") no-repeat center / cover;
+    background-image: url("../img/background/bg-mobile@2x.jpg");
+    background-image: image-set(url("../img/background/bg-mobile@2x.webp") 2x,
+                      url("../img/background/bg-mobile@2x.jpg") 2x);
   }
 
   &::after {
@@ -37,10 +45,14 @@
   @media (min-width: variables.$tablet-width) {
     min-height: 518px;
     padding: 77px 153px 91px;
-    background: var(--bg-layer) url("../img/background/bg-desktop.jpg") no-repeat center / cover;
+    background-image: url("../img/background/bg-desktop.jpg");
+    background-image: image-set(url("../img/background/bg-desktop.webp") 1x,
+                      url("../img/background/bg-desktop.jpg") 1x);
 
     @media (min-resolution: 2dppx) {
-      background: var(--bg-layer) url("../img/background/bg-desktop@2x.jpg") no-repeat center / cover;
+      background-image: url("../img/background/bg-desktop@2x.jpg");
+      background-image: image-set(url("../img/background/bg-desktop@2x.webp") 2x,
+                        url("../img/background/bg-desktop@2x.jpg") 2x);
     }
   }
 
@@ -80,7 +92,7 @@
 
   @media (min-width: variables.$tablet-width) {
     font-size: 21px;
-    padding: 0 124px;
+    max-width: 520px;
     margin: 0 auto 29px;
 
     br {
@@ -88,6 +100,7 @@
     }
 
     @media (min-width: variables.$desktop-width) {
+      max-width: 100%;
       padding: 0 300px;
     }
   }
@@ -106,7 +119,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 358px;
+    padding: 0 356px;
     margin: 0 auto 45px;
   }
 }

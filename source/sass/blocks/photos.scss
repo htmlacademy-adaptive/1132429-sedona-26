@@ -24,73 +24,12 @@
   }
 }
 
-.photos__header {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  background: var(--bg-layer) url("../img/background/bg-mobile.jpg") no-repeat 0 100% / cover;
-  min-height: 158px;
-  margin-bottom: 33px;
-
-  @media (min-resolution: 2dppx) {
-    background: var(--bg-layer) url("../img/background/bg-mobile@2x.jpg") no-repeat 0 100% / cover;
-  }
-
-  &::after {
-    position: absolute;
-    display: block;
-    content: "";
-    width: 100%;
-    height: 57px;
-    background: url("../img/background/intro-triangle.svg") no-repeat center;
-    left: 0;
-    bottom: 0;
-
-    @media (min-width: variables.$desktop-width) {
-      height: 68px;
-      background-position: bottom;
-      background-size: 100%;
-    }
-  }
-
-  @media (min-width: variables.$tablet-width) {
-    min-height: 290px;
-    background: var(--bg-layer) url("../img/background/bg-desktop.jpg") no-repeat 0 100% / cover;
-    margin-bottom: 62px;
-
-    @media (min-resolution: 2dppx) {
-      background: var(--bg-layer) url("../img/background/bg-desktop@2x.jpg") no-repeat 0 100% / cover;
-    }
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    min-height: 301px;
-    margin-bottom: 100px;
-  }
-}
-
-.photos__image {
-  margin: 52px auto 67px;
-
-  @media (min-width: variables.$tablet-width) {
-    width: 457px;
-    height: 78px;
-    margin: 95px auto 117px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    width: 460px;
-    height: 80px;
-    margin: 101px auto 120px;
-  }
-}
-
 .photos__title {
-  margin: 0 auto 21px;
+  margin: 0 auto 24px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 30px;
-    margin: 0 auto 35px;
+    margin: 0 auto 32px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -101,26 +40,45 @@
 .photos__description {
   color: var(--text-secondary);
   text-transform: uppercase;
-  margin: 0 auto 20px;
+  margin: 0 auto 36px;
   text-align: center;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: variables.$tablet-width) {
-    margin: 0 auto 63px;
+    margin: 0 auto 81px;
+
+    br {
+      display: block;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 40px;
-    margin: 0 auto 65px;
+    margin: 0 auto 89px;
   }
 }
 
 .photos__list {
-  padding: 24px 0 25px;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  padding: 26px 0 25px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    background-color: #e5e5e5;
+    left: -20px;
+  }
 
   @media (min-width: variables.$tablet-width) {
     padding: 0;
-    border: none;
+
+    &::before {
+      display: none;
+    }
   }
 }
