@@ -13,20 +13,6 @@
   }
 }
 
-.advantages-list__wrapper {
-  min-width: 100%;
-
-  @media (min-width: variables.$tablet-width) {
-    min-width: 90%;
-    margin: 0 auto;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    min-width: 75%;
-    margin: 0 auto;
-  }
-}
-
 .advantages-list__item {
   width: 100%;
   position: relative;
@@ -68,7 +54,7 @@
     }
 
     &:nth-of-type(2n) {
-      .advantage-list__wrapper-image {
+      .advantages-list__wrapper-image {
         order: -1;
       }
     }
@@ -222,7 +208,7 @@
   }
 }
 
-.advantage-list__wrapper-image {
+.advantages-list__wrapper-image {
   display: block;
   background-color: var(--image-layer);
   width: 100%;
